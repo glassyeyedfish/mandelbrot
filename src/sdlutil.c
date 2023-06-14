@@ -1,14 +1,15 @@
 #include <SDL2/SDL.h>
 
-#include "./sdlutil.h"
+#include "sdlutil.h"
 
 #define KEYCODE_MOD 1073741625 
 #define KEYCODE_MAX 512
 
-ctx_t* 
+sdl_ctx_t* 
 create_ctx(const char* title, int width, int height) 
 {
-    ctx_t* ctx = (ctx_t*) malloc(sizeof(ctx_t));
+    // Initialize SDL stuff
+    sdl_ctx_t* ctx = (sdl_ctx_t*) malloc(sizeof(sdl_ctx_t));
 
     if (SDL_Init(SDL_INIT_VIDEO) < 0) {
         fprintf(stderr, "[error] while initializing SDL.\nSDL Error: %s", SDL_GetError());
@@ -55,7 +56,7 @@ create_ctx(const char* title, int width, int height)
 }
 
 void 
-destroy_ctx(ctx_t* ctx) 
+destroy_ctx(sdl_ctx_t* ctx) 
 {
     SDL_DestroyRenderer(ctx->ren);
     SDL_DestroyWindow(ctx->win);
@@ -66,7 +67,7 @@ destroy_ctx(ctx_t* ctx)
 }
 
 void 
-poll_events(ctx_t* ctx) 
+poll_events(sdl_ctx_t* ctx) 
 {
     int i;
     SDL_Event e;

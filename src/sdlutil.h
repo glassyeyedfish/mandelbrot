@@ -13,7 +13,7 @@ typedef struct {
     bool window_should_close;
     SDL_KeyCode current_key_state[512];
     SDL_KeyCode previous_key_state[512];
-} ctx_t;
+} sdl_ctx_t;
 
 typedef enum {
     KEY_BKSP    = 8,
@@ -35,8 +35,8 @@ typedef enum {
     KEY_LEFT, KEY_DOWN, KEY_UP
 } key_t;
 
-ctx_t* create_ctx(const char* title, int width, int height);
-void destroy_ctx(ctx_t* ctx);
-void poll_events(ctx_t* ctx);
+sdl_ctx_t* create_ctx(const char* title, int width, int height);
+void destroy_ctx(sdl_ctx_t* ctx);
+void poll_events(sdl_ctx_t* ctx);
 
 #endif
