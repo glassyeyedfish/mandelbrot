@@ -2,8 +2,23 @@
 
 #include "sdlutil.h"
 
+#define NK_INCLUDE_FIXED_TYPES
+#define NK_INCLUDE_STANDARD_IO
+#define NK_INCLUDE_STANDARD_VARARGS
+#define NK_INCLUDE_DEFAULT_ALLOCATOR
+#define NK_INCLUDE_VERTEX_BUFFER_OUTPUT
+#define NK_INCLUDE_FONT_BAKING
+#define NK_INCLUDE_DEFAULT_FONT
+#define NK_IMPLEMENTATION
+#define NK_SDL_RENDERER_IMPLEMENTATION
+
+#include "nuklear.h"
+#include "nuklear_sdl_renderer.h"
+
 #define KEYCODE_MOD 1073741625 
 #define KEYCODE_MAX 512
+
+#define FONT_SCALE 1.0f
 
 sdl_ctx_t* 
 create_ctx(const char* title, int width, int height) 
@@ -52,6 +67,29 @@ create_ctx(const char* title, int width, int height)
 
     ctx->window_should_close = false;
 
+    // Set up Nuklear
+
+    ctx->nk = nk_sdl_init(ctx->win, ctx->ren);
+    /* Load Fonts: if none of these are loaded a default font will be used  */
+    /* Load Cursor: if you uncomment cursor loading please hide the cursor */
+    {
+        struct nk_font_atlas *atlas;
+        struct nk_font_config config = nk_font_config(0);
+        struct nk_font *font;
+
+        /* set up the font atlas and add desired font; note that font sizes are
+         * multiplied by font_scale to produce better results at higher DPIs */
+        nk_sdl_font_stash_begin(&atlas);
+        font = nk_font_atlas_add_default(atlas, 13 * FONT_SCALE, &config);
+        nk_sdl_font_stash_end();
+
+        /* this hack makes the font appear to be scaled down to the desired
+         * size and is only necessary when font_scale > 1 */
+        font->handle.height /= FONT_SCALE;
+        /*nk_style_load_all_cursors(ctx, atlas->cursors);*/
+        nk_style_set_font(ctx, &font->handle);
+    }
+
     return ctx;
 }
 
@@ -72,6 +110,8 @@ poll_events(sdl_ctx_t* ctx)
     int i;
     SDL_Event e;
 
+    // Nuklear event handling
+    nk_input_begin(ctx->nk);
 
     for (i = 0; i < KEYCODE_MAX; i++) {
         ctx->previous_key_state[i] = ctx->current_key_state[i];
@@ -109,5 +149,9 @@ poll_events(sdl_ctx_t* ctx)
         default:
             break;
         }
+
+        // Nuklear event handling
+        nk_sdl_handle_event(&e);
+        nk_input_end(ctx->nk);
     }
 }

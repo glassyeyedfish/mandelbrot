@@ -4,6 +4,7 @@
 #include <SDL2/SDL.h>
 
 #include "sdlutil.h"
+#include "nuklear.h"
 
 #define WINDOW_TITLE "Mandelbrot Set Visualizer"
 #define WINDOW_WIDTH 1280
@@ -74,6 +75,40 @@ main()
     // The main loop
     while (!(ctx->window_should_close)) {
         poll_events(ctx);
+
+        /* GUI */
+        if (nk_begin(ctx->nk, "Demo", nk_rect(50, 50, 230, 250),
+            NK_WINDOW_BORDER|NK_WINDOW_MOVABLE|NK_WINDOW_SCALABLE|
+            NK_WINDOW_MINIMIZABLE|NK_WINDOW_TITLE))
+        {
+            enum {EASY, HARD};
+            static int op = EASY;
+            static int property = 20;
+
+            nk_layout_row_static(ctx->nk, 30, 80, 1);
+            if (nk_button_label(ctx->nk, "button"))
+                fprintf(stdout, "button pressed\n");
+            nk_layout_row_dynamic(ctx->nk, 30, 2);
+            if (nk_option_label(ctx->nk, "easy", op == EASY)) op = EASY;
+            if (nk_option_label(ctx->nk, "hard", op == HARD)) op = HARD;
+            nk_layout_row_dynamic(ctx->nk, 25, 1);
+            nk_property_int(ctx->nk, "Compression:", 0, &property, 100, 10, 1);
+
+            nk_layout_row_dynamic(ctx->nk, 20, 1);
+            nk_label(ctx->nk, "background:", NK_TEXT_LEFT);
+            nk_layout_row_dynamic(ctx->nk, 25, 1);
+            if (nk_combo_begin_color(ctx->nk, nk_rgb_cf(ctx->bg), nk_vec2(nk_widget_width(ctx->nk),400))) {
+                nk_layout_row_dynamic(ctx->nk, 120, 1);
+                ctx->bg = nk_color_picker(ctx->nk, ctx->bg, NK_RGBA);
+                nk_layout_row_dynamic(ctx->nk, 25, 1);
+                ctx->bg.r = nk_propertyf(ctx->nk, "#R:", 0, ctx->bg.r, 1.0f, 0.01f,0.005f);
+                ctx->bg.g = nk_propertyf(ctx->nk, "#G:", 0, ctx->bg.g, 1.0f, 0.01f,0.005f);
+                ctx->bg.b = nk_propertyf(ctx->nk, "#B:", 0, ctx->bg.b, 1.0f, 0.01f,0.005f);
+                ctx->bg.a = nk_propertyf(ctx->nk, "#A:", 0, ctx->bg.a, 1.0f, 0.01f,0.005f);
+                nk_combo_end(ctx->nk);
+            }
+        }
+        nk_end(ctx->nk);
 
         SDL_RenderCopy(ctx->ren, ctx->tex, NULL, NULL);
         SDL_RenderPresent(ctx->ren);

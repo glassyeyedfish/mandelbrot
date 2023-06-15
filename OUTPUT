@@ -1,0 +1,2873 @@
+In file included from src/sdlutil.c:15:
+src/nuklear.h: In function ‘nk_draw_list_init’:
+src/nuklear.h:9400:25: error: invalid application of ‘sizeof’ to incomplete type ‘struct nk_draw_list’
+ 9400 |     nk_zero(list, sizeof(*list));
+      |                         ^
+In file included from src/sdlutil.h:8,
+                 from src/sdlutil.c:3:
+src/nuklear.h:9401:32: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9401 |     for (i = 0; i < NK_LEN(list->circle_vtx); ++i) {
+      |                                ^~
+src/nuklear.h:5676:27: note: in definition of macro ‘NK_LEN’
+ 5676 | #define NK_LEN(a) (sizeof(a)/sizeof(a)[0])
+      |                           ^
+src/nuklear.h:9401:32: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9401 |     for (i = 0; i < NK_LEN(list->circle_vtx); ++i) {
+      |                                ^~
+src/nuklear.h:5676:37: note: in definition of macro ‘NK_LEN’
+ 5676 | #define NK_LEN(a) (sizeof(a)/sizeof(a)[0])
+      |                                     ^
+src/nuklear.h:9402:55: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9402 |         const float a = ((float)i / (float)NK_LEN(list->circle_vtx)) * 2 * NK_PI;
+      |                                                       ^~
+src/nuklear.h:5676:27: note: in definition of macro ‘NK_LEN’
+ 5676 | #define NK_LEN(a) (sizeof(a)/sizeof(a)[0])
+      |                           ^
+src/nuklear.h:9402:55: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9402 |         const float a = ((float)i / (float)NK_LEN(list->circle_vtx)) * 2 * NK_PI;
+      |                                                       ^~
+src/nuklear.h:5676:37: note: in definition of macro ‘NK_LEN’
+ 5676 | #define NK_LEN(a) (sizeof(a)/sizeof(a)[0])
+      |                                     ^
+In file included from src/sdlutil.c:15:
+src/nuklear.h:9403:13: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9403 |         list->circle_vtx[i].x = (float)NK_COS(a);
+      |             ^~
+src/nuklear.h:9404:13: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9404 |         list->circle_vtx[i].y = (float)NK_SIN(a);
+      |             ^~
+src/nuklear.h: In function ‘nk_draw_list_setup’:
+src/nuklear.h:9420:11: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9420 |     canvas->buffer = cmds;
+      |           ^~
+src/nuklear.h:9421:11: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9421 |     canvas->config = *config;
+      |           ^~
+src/nuklear.h:9422:11: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9422 |     canvas->elements = elements;
+      |           ^~
+src/nuklear.h:9423:11: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9423 |     canvas->vertices = vertices;
+      |           ^~
+src/nuklear.h:9424:11: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9424 |     canvas->line_AA = line_aa;
+      |           ^~
+src/nuklear.h:9425:11: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9425 |     canvas->shape_AA = shape_aa;
+      |           ^~
+src/nuklear.h:9426:11: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9426 |     canvas->clip_rect = nk_null_rect;
+      |           ^~
+src/nuklear.h:9428:11: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9428 |     canvas->cmd_offset = 0;
+      |           ^~
+src/nuklear.h:9429:11: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9429 |     canvas->element_count = 0;
+      |           ^~
+src/nuklear.h:9430:11: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9430 |     canvas->vertex_count = 0;
+      |           ^~
+src/nuklear.h:9431:11: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9431 |     canvas->cmd_offset = 0;
+      |           ^~
+src/nuklear.h:9432:11: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9432 |     canvas->cmd_count = 0;
+      |           ^~
+src/nuklear.h:9433:11: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9433 |     canvas->path_count = 0;
+      |           ^~
+src/nuklear.h: In function ‘nk__draw_list_begin’:
+src/nuklear.h:9443:44: error: invalid use of undefined type ‘const struct nk_draw_list’
+ 9443 |     if (!buffer || !buffer->size || !canvas->cmd_count)
+      |                                            ^~
+src/nuklear.h:9447:42: error: invalid use of undefined type ‘const struct nk_draw_list’
+ 9447 |     offset = buffer->memory.size - canvas->cmd_offset;
+      |                                          ^~
+src/nuklear.h: In function ‘nk__draw_list_end’:
+src/nuklear.h:9466:27: error: invalid use of undefined type ‘const struct nk_draw_list’
+ 9466 |     offset = size - canvas->cmd_offset;
+      |                           ^~
+src/nuklear.h:9468:19: error: invalid use of undefined type ‘const struct nk_draw_list’
+ 9468 |     end -= (canvas->cmd_count-1);
+      |                   ^~
+src/nuklear.h: In function ‘nk__draw_list_next’:
+src/nuklear.h:9483:16: error: invalid use of undefined type ‘struct nk_draw_command’
+ 9483 |     return (cmd-1);
+      |                ^
+src/nuklear.h: In function ‘nk_draw_list_alloc_path’:
+src/nuklear.h:9492:29: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9492 |         nk_buffer_alloc(list->buffer, NK_BUFFER_FRONT,
+      |                             ^~
+src/nuklear.h:9496:14: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9496 |     if (!list->path_offset) {
+      |              ^~
+src/nuklear.h:9497:45: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9497 |         void *memory = nk_buffer_memory(list->buffer);
+      |                                             ^~
+src/nuklear.h:9498:13: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9498 |         list->path_offset = (unsigned int)((nk_byte*)points - (nk_byte*)memory);
+      |             ^~
+src/nuklear.h:9500:9: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9500 |     list->path_count += (unsigned int)count;
+      |         ^~
+In file included from src/nuklear.h:5775,
+                 from src/sdlutil.c:15:
+src/nuklear.h: In function ‘nk_draw_list_path_last’:
+src/nuklear.h:9508:19: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9508 |     NK_ASSERT(list->path_count);
+      |                   ^~
+src/nuklear.h:9508:5: note: in expansion of macro ‘NK_ASSERT’
+ 9508 |     NK_ASSERT(list->path_count);
+      |     ^~~~~~~~~
+In file included from src/sdlutil.c:15:
+src/nuklear.h:9509:35: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9509 |     memory = nk_buffer_memory(list->buffer);
+      |                                   ^~
+In file included from src/sdlutil.h:8,
+                 from src/sdlutil.c:3:
+src/nuklear.h:9510:52: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9510 |     point = nk_ptr_add(struct nk_vec2, memory, list->path_offset);
+      |                                                    ^~
+src/nuklear.h:5692:60: note: in definition of macro ‘nk_ptr_add’
+ 5692 | #define nk_ptr_add(t, p, i) ((t*)((void*)((nk_byte*)(p) + (i))))
+      |                                                            ^
+In file included from src/sdlutil.c:15:
+src/nuklear.h:9511:19: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9511 |     point += (list->path_count-1);
+      |                   ^~
+In file included from src/sdlutil.h:8,
+                 from src/sdlutil.c:3:
+src/nuklear.h: In function ‘nk_draw_list_push_command’:
+src/nuklear.h:5737:53: error: field ‘_h’ has incomplete type
+ 5737 | #define NK_ALIGNOF(t) NK_OFFSETOF(struct {char c; t _h;}, _h)
+      |                                                     ^~
+src/nuklear.h:5720:47: note: in definition of macro ‘NK_OFFSETOF’
+ 5720 | #define NK_OFFSETOF(st,m) (__builtin_offsetof(st,m))
+      |                                               ^~
+src/nuklear.h:9518:42: note: in expansion of macro ‘NK_ALIGNOF’
+ 9518 |     NK_STORAGE const nk_size cmd_align = NK_ALIGNOF(struct nk_draw_command);
+      |                                          ^~~~~~~~~~
+In file included from src/sdlutil.c:15:
+src/nuklear.h:9519:48: error: invalid application of ‘sizeof’ to incomplete type ‘struct nk_draw_command’
+ 9519 |     NK_STORAGE const nk_size cmd_size = sizeof(struct nk_draw_command);
+      |                                                ^~~~~~
+src/nuklear.h:9524:29: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9524 |         nk_buffer_alloc(list->buffer, NK_BUFFER_BACK, cmd_size, cmd_align);
+      |                             ^~
+src/nuklear.h:9527:14: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9527 |     if (!list->cmd_count) {
+      |              ^~
+src/nuklear.h:9528:58: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9528 |         nk_byte *memory = (nk_byte*)nk_buffer_memory(list->buffer);
+      |                                                          ^~
+src/nuklear.h:9529:45: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9529 |         nk_size total = nk_buffer_total(list->buffer);
+      |                                             ^~
+src/nuklear.h:9531:13: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9531 |         list->cmd_offset = (nk_size)(memory - (nk_byte*)cmd);
+      |             ^~
+src/nuklear.h:9534:8: error: invalid use of undefined type ‘struct nk_draw_command’
+ 9534 |     cmd->elem_count = 0;
+      |        ^~
+src/nuklear.h:9535:8: error: invalid use of undefined type ‘struct nk_draw_command’
+ 9535 |     cmd->clip_rect = clip;
+      |        ^~
+src/nuklear.h:9536:8: error: invalid use of undefined type ‘struct nk_draw_command’
+ 9536 |     cmd->texture = texture;
+      |        ^~
+src/nuklear.h:9541:9: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9541 |     list->cmd_count++;
+      |         ^~
+src/nuklear.h:9542:9: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9542 |     list->clip_rect = clip;
+      |         ^~
+In file included from src/nuklear.h:5775,
+                 from src/sdlutil.c:15:
+src/nuklear.h: In function ‘nk_draw_list_command_last’:
+src/nuklear.h:9551:19: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9551 |     NK_ASSERT(list->cmd_count);
+      |                   ^~
+src/nuklear.h:9551:5: note: in expansion of macro ‘NK_ASSERT’
+ 9551 |     NK_ASSERT(list->cmd_count);
+      |     ^~~~~~~~~
+In file included from src/sdlutil.c:15:
+src/nuklear.h:9553:35: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9553 |     memory = nk_buffer_memory(list->buffer);
+      |                                   ^~
+src/nuklear.h:9554:32: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9554 |     size = nk_buffer_total(list->buffer);
+      |                                ^~
+In file included from src/sdlutil.h:8,
+                 from src/sdlutil.c:3:
+src/nuklear.h:9555:65: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9555 |     cmd = nk_ptr_add(struct nk_draw_command, memory, size - list->cmd_offset);
+      |                                                                 ^~
+src/nuklear.h:5692:60: note: in definition of macro ‘nk_ptr_add’
+ 5692 | #define nk_ptr_add(t, p, i) ((t*)((void*)((nk_byte*)(p) + (i))))
+      |                                                            ^
+In file included from src/sdlutil.c:15:
+src/nuklear.h:9556:24: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9556 |     return (cmd - (list->cmd_count-1));
+      |                        ^~
+src/nuklear.h: In function ‘nk_draw_list_add_clip’:
+src/nuklear.h:9563:14: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9563 |     if (!list->cmd_count) {
+      |              ^~
+src/nuklear.h:9564:51: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9564 |         nk_draw_list_push_command(list, rect, list->config.tex_null.texture);
+      |                                                   ^~
+src/nuklear.h:9567:17: error: invalid use of undefined type ‘struct nk_draw_command’
+ 9567 |         if (prev->elem_count == 0)
+      |                 ^~
+src/nuklear.h:9568:17: error: invalid use of undefined type ‘struct nk_draw_command’
+ 9568 |             prev->clip_rect = rect;
+      |                 ^~
+src/nuklear.h:9569:51: error: invalid use of undefined type ‘struct nk_draw_command’
+ 9569 |         nk_draw_list_push_command(list, rect, prev->texture);
+      |                                                   ^~
+src/nuklear.h: In function ‘nk_draw_list_push_image’:
+src/nuklear.h:9577:14: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9577 |     if (!list->cmd_count) {
+      |              ^~
+src/nuklear.h:9581:17: error: invalid use of undefined type ‘struct nk_draw_command’
+ 9581 |         if (prev->elem_count == 0) {
+      |                 ^~
+src/nuklear.h:9582:17: error: invalid use of undefined type ‘struct nk_draw_command’
+ 9582 |             prev->texture = texture;
+      |                 ^~
+src/nuklear.h:9586:20: error: invalid use of undefined type ‘struct nk_draw_command’
+ 9586 |     } else if (prev->texture.id != texture.id
+      |                    ^~
+src/nuklear.h:9590:47: error: invalid use of undefined type ‘struct nk_draw_command’
+ 9590 |         ) nk_draw_list_push_command(list, prev->clip_rect, texture);
+      |                                               ^~
+src/nuklear.h: In function ‘nk_draw_list_alloc_vertices’:
+src/nuklear.h:9606:31: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9606 |     vtx = nk_buffer_alloc(list->vertices, NK_BUFFER_FRONT,
+      |                               ^~
+src/nuklear.h:9607:13: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9607 |         list->config.vertex_size*count, list->config.vertex_alignment);
+      |             ^~
+src/nuklear.h:9607:45: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9607 |         list->config.vertex_size*count, list->config.vertex_alignment);
+      |                                             ^~
+src/nuklear.h:9609:9: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9609 |     list->vertex_count += (unsigned int)count;
+      |         ^~
+src/nuklear.h:9620:15: error: ‘nk_draw_index’ undeclared (first use in this function); did you mean ‘nk_draw_slider’?
+ 9620 |     if(sizeof(nk_draw_index)==2) NK_ASSERT((list->vertex_count < NK_USHORT_MAX &&
+      |               ^~~~~~~~~~~~~
+      |               nk_draw_slider
+src/nuklear.h:9620:15: note: each undeclared identifier is reported only once for each function it appears in
+In file included from src/nuklear.h:5775,
+                 from src/sdlutil.c:15:
+src/nuklear.h:9620:49: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9620 |     if(sizeof(nk_draw_index)==2) NK_ASSERT((list->vertex_count < NK_USHORT_MAX &&
+      |                                                 ^~
+src/nuklear.h:9620:34: note: in expansion of macro ‘NK_ASSERT’
+ 9620 |     if(sizeof(nk_draw_index)==2) NK_ASSERT((list->vertex_count < NK_USHORT_MAX &&
+      |                                  ^~~~~~~~~
+In file included from src/sdlutil.c:15:
+src/nuklear.h: At top level:
+src/nuklear.h:9624:11: error: unknown type name ‘nk_draw_index’
+ 9624 | NK_INTERN nk_draw_index*
+      |           ^~~~~~~~~~~~~
+src/nuklear.h: In function ‘nk_draw_list_alloc_elements’:
+src/nuklear.h:9627:5: error: unknown type name ‘nk_draw_index’
+ 9627 |     nk_draw_index *ids;
+      |     ^~~~~~~~~~~~~
+In file included from src/sdlutil.h:8,
+                 from src/sdlutil.c:3:
+src/nuklear.h:9629:54: error: unknown type name ‘nk_draw_index’
+ 9629 |     NK_STORAGE const nk_size elem_align = NK_ALIGNOF(nk_draw_index);
+      |                                                      ^~~~~~~~~~~~~
+src/nuklear.h:5720:47: note: in definition of macro ‘NK_OFFSETOF’
+ 5720 | #define NK_OFFSETOF(st,m) (__builtin_offsetof(st,m))
+      |                                               ^~
+src/nuklear.h:9629:43: note: in expansion of macro ‘NK_ALIGNOF’
+ 9629 |     NK_STORAGE const nk_size elem_align = NK_ALIGNOF(nk_draw_index);
+      |                                           ^~~~~~~~~~
+In file included from src/sdlutil.c:15:
+src/nuklear.h:9630:49: error: ‘nk_draw_index’ undeclared (first use in this function); did you mean ‘nk_draw_slider’?
+ 9630 |     NK_STORAGE const nk_size elem_size = sizeof(nk_draw_index);
+      |                                                 ^~~~~~~~~~~~~
+      |                                                 nk_draw_slider
+src/nuklear.h:9634:26: error: expected expression before ‘)’ token
+ 9634 |     ids = (nk_draw_index*)
+      |                          ^
+src/nuklear.h:9638:9: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9638 |     list->element_count += (unsigned int)count;
+      |         ^~
+src/nuklear.h:9639:8: error: invalid use of undefined type ‘struct nk_draw_command’
+ 9639 |     cmd->elem_count += (unsigned int)count;
+      |        ^~
+src/nuklear.h:9630:30: warning: unused variable ‘elem_size’ [-Wunused-variable]
+ 9630 |     NK_STORAGE const nk_size elem_size = sizeof(nk_draw_index);
+      |                              ^~~~~~~~~
+src/nuklear.h:9629:30: warning: unused variable ‘elem_align’ [-Wunused-variable]
+ 9629 |     NK_STORAGE const nk_size elem_align = NK_ALIGNOF(nk_draw_index);
+      |                              ^~~~~~~~~~
+src/nuklear.h: In function ‘nk_draw_vertex_layout_element_is_end_of_layout’:
+src/nuklear.h:9646:20: error: invalid use of undefined type ‘const struct nk_draw_vertex_layout_element’
+ 9646 |     return (element->attribute == NK_VERTEX_ATTRIBUTE_COUNT ||
+      |                    ^~
+src/nuklear.h:9646:35: error: ‘NK_VERTEX_ATTRIBUTE_COUNT’ undeclared (first use in this function)
+ 9646 |     return (element->attribute == NK_VERTEX_ATTRIBUTE_COUNT ||
+      |                                   ^~~~~~~~~~~~~~~~~~~~~~~~~
+src/nuklear.h:9647:20: error: invalid use of undefined type ‘const struct nk_draw_vertex_layout_element’
+ 9647 |             element->format == NK_FORMAT_COUNT);
+      |                    ^~
+src/nuklear.h:9647:32: error: ‘NK_FORMAT_COUNT’ undeclared (first use in this function); did you mean ‘NK_LAYOUT_COUNT’?
+ 9647 |             element->format == NK_FORMAT_COUNT);
+      |                                ^~~~~~~~~~~~~~~
+      |                                NK_LAYOUT_COUNT
+src/nuklear.h: At top level:
+src/nuklear.h:9651:10: warning: ISO C forbids forward references to ‘enum’ types [-Wpedantic]
+ 9651 |     enum nk_draw_vertex_layout_format format)
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/nuklear.h:9651:10: warning: ‘enum nk_draw_vertex_layout_format’ declared inside parameter list will not be visible outside of this definition or declaration
+src/nuklear.h:9651:39: error: parameter 3 (‘format’) has incomplete type
+ 9651 |     enum nk_draw_vertex_layout_format format)
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+In file included from src/nuklear.h:5775,
+                 from src/sdlutil.c:15:
+src/nuklear.h: In function ‘nk_draw_vertex_color’:
+src/nuklear.h:9655:25: error: ‘NK_FORMAT_COLOR_BEGIN’ undeclared (first use in this function)
+ 9655 |     NK_ASSERT(format >= NK_FORMAT_COLOR_BEGIN);
+      |                         ^~~~~~~~~~~~~~~~~~~~~
+src/nuklear.h:9655:5: note: in expansion of macro ‘NK_ASSERT’
+ 9655 |     NK_ASSERT(format >= NK_FORMAT_COLOR_BEGIN);
+      |     ^~~~~~~~~
+src/nuklear.h:9656:25: error: ‘NK_FORMAT_COLOR_END’ undeclared (first use in this function)
+ 9656 |     NK_ASSERT(format <= NK_FORMAT_COLOR_END);
+      |                         ^~~~~~~~~~~~~~~~~~~
+src/nuklear.h:9656:5: note: in expansion of macro ‘NK_ASSERT’
+ 9656 |     NK_ASSERT(format <= NK_FORMAT_COLOR_END);
+      |     ^~~~~~~~~
+In file included from src/sdlutil.c:15:
+src/nuklear.h:9666:10: error: ‘NK_FORMAT_R8G8B8A8’ undeclared (first use in this function)
+ 9666 |     case NK_FORMAT_R8G8B8A8:
+      |          ^~~~~~~~~~~~~~~~~~
+src/nuklear.h:9667:10: error: ‘NK_FORMAT_R8G8B8’ undeclared (first use in this function)
+ 9667 |     case NK_FORMAT_R8G8B8: {
+      |          ^~~~~~~~~~~~~~~~
+src/nuklear.h:9671:10: error: ‘NK_FORMAT_B8G8R8A8’ undeclared (first use in this function)
+ 9671 |     case NK_FORMAT_B8G8R8A8: {
+      |          ^~~~~~~~~~~~~~~~~~
+src/nuklear.h:9676:10: error: ‘NK_FORMAT_R16G15B16’ undeclared (first use in this function)
+ 9676 |     case NK_FORMAT_R16G15B16: {
+      |          ^~~~~~~~~~~~~~~~~~~
+src/nuklear.h:9683:10: error: ‘NK_FORMAT_R16G15B16A16’ undeclared (first use in this function)
+ 9683 |     case NK_FORMAT_R16G15B16A16: {
+      |          ^~~~~~~~~~~~~~~~~~~~~~
+src/nuklear.h:9691:10: error: ‘NK_FORMAT_R32G32B32’ undeclared (first use in this function)
+ 9691 |     case NK_FORMAT_R32G32B32: {
+      |          ^~~~~~~~~~~~~~~~~~~
+src/nuklear.h:9698:10: error: ‘NK_FORMAT_R32G32B32A32’ undeclared (first use in this function)
+ 9698 |     case NK_FORMAT_R32G32B32A32: {
+      |          ^~~~~~~~~~~~~~~~~~~~~~
+src/nuklear.h:9706:10: error: ‘NK_FORMAT_R32G32B32A32_FLOAT’ undeclared (first use in this function)
+ 9706 |     case NK_FORMAT_R32G32B32A32_FLOAT:
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/nuklear.h:9709:10: error: ‘NK_FORMAT_R32G32B32A32_DOUBLE’ undeclared (first use in this function)
+ 9709 |     case NK_FORMAT_R32G32B32A32_DOUBLE: {
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/nuklear.h:9717:10: error: ‘NK_FORMAT_RGB32’ undeclared (first use in this function)
+ 9717 |     case NK_FORMAT_RGB32:
+      |          ^~~~~~~~~~~~~~~
+src/nuklear.h:9718:10: error: ‘NK_FORMAT_RGBA32’ undeclared (first use in this function); did you mean ‘SDL_PIXELFORMAT_RGBA32’?
+ 9718 |     case NK_FORMAT_RGBA32: {
+      |          ^~~~~~~~~~~~~~~~
+      |          SDL_PIXELFORMAT_RGBA32
+src/nuklear.h:9651:39: warning: unused parameter ‘format’ [-Wunused-parameter]
+ 9651 |     enum nk_draw_vertex_layout_format format)
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+src/nuklear.h: At top level:
+src/nuklear.h:9726:10: warning: ISO C forbids forward references to ‘enum’ types [-Wpedantic]
+ 9726 |     enum nk_draw_vertex_layout_format format)
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/nuklear.h:9726:10: warning: ‘enum nk_draw_vertex_layout_format’ declared inside parameter list will not be visible outside of this definition or declaration
+src/nuklear.h:9726:39: error: parameter 4 (‘format’) has incomplete type
+ 9726 |     enum nk_draw_vertex_layout_format format)
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+In file included from src/nuklear.h:5775,
+                 from src/sdlutil.c:15:
+src/nuklear.h: In function ‘nk_draw_vertex_element’:
+src/nuklear.h:9731:24: error: ‘NK_FORMAT_COLOR_BEGIN’ undeclared (first use in this function)
+ 9731 |     NK_ASSERT(format < NK_FORMAT_COLOR_BEGIN);
+      |                        ^~~~~~~~~~~~~~~~~~~~~
+src/nuklear.h:9731:5: note: in expansion of macro ‘NK_ASSERT’
+ 9731 |     NK_ASSERT(format < NK_FORMAT_COLOR_BEGIN);
+      |     ^~~~~~~~~
+In file included from src/sdlutil.c:15:
+src/nuklear.h:9732:54: error: ‘NK_FORMAT_COLOR_END’ undeclared (first use in this function)
+ 9732 |     if (format >= NK_FORMAT_COLOR_BEGIN && format <= NK_FORMAT_COLOR_END) return;
+      |                                                      ^~~~~~~~~~~~~~~~~~~
+src/nuklear.h:9736:14: error: ‘NK_FORMAT_SCHAR’ undeclared (first use in this function)
+ 9736 |         case NK_FORMAT_SCHAR: {
+      |              ^~~~~~~~~~~~~~~
+src/nuklear.h:9741:14: error: ‘NK_FORMAT_SSHORT’ undeclared (first use in this function)
+ 9741 |         case NK_FORMAT_SSHORT: {
+      |              ^~~~~~~~~~~~~~~~
+src/nuklear.h:9746:14: error: ‘NK_FORMAT_SINT’ undeclared (first use in this function)
+ 9746 |         case NK_FORMAT_SINT: {
+      |              ^~~~~~~~~~~~~~
+src/nuklear.h:9751:14: error: ‘NK_FORMAT_UCHAR’ undeclared (first use in this function)
+ 9751 |         case NK_FORMAT_UCHAR: {
+      |              ^~~~~~~~~~~~~~~
+src/nuklear.h:9756:14: error: ‘NK_FORMAT_USHORT’ undeclared (first use in this function)
+ 9756 |         case NK_FORMAT_USHORT: {
+      |              ^~~~~~~~~~~~~~~~
+src/nuklear.h:9761:14: error: ‘NK_FORMAT_UINT’ undeclared (first use in this function)
+ 9761 |         case NK_FORMAT_UINT: {
+      |              ^~~~~~~~~~~~~~
+src/nuklear.h:9766:14: error: ‘NK_FORMAT_FLOAT’ undeclared (first use in this function); did you mean ‘NK_FILTER_FLOAT’?
+ 9766 |         case NK_FORMAT_FLOAT:
+      |              ^~~~~~~~~~~~~~~
+      |              NK_FILTER_FLOAT
+src/nuklear.h:9770:14: error: ‘NK_FORMAT_DOUBLE’ undeclared (first use in this function); did you mean ‘NK_PROPERTY_DOUBLE’?
+ 9770 |         case NK_FORMAT_DOUBLE: {
+      |              ^~~~~~~~~~~~~~~~
+      |              NK_PROPERTY_DOUBLE
+src/nuklear.h:9726:39: warning: unused parameter ‘format’ [-Wunused-parameter]
+ 9726 |     enum nk_draw_vertex_layout_format format)
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+src/nuklear.h: In function ‘nk_draw_vertex’:
+src/nuklear.h:9785:55: error: invalid use of undefined type ‘const struct nk_draw_vertex_layout_element’
+ 9785 |         void *address = (void*)((char*)dst + elem_iter->offset);
+      |                                                       ^~
+src/nuklear.h:9786:26: error: invalid use of undefined type ‘const struct nk_draw_vertex_layout_element’
+ 9786 |         switch (elem_iter->attribute) {
+      |                          ^~
+src/nuklear.h:9787:14: error: ‘NK_VERTEX_ATTRIBUTE_COUNT’ undeclared (first use in this function)
+ 9787 |         case NK_VERTEX_ATTRIBUTE_COUNT:
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~
+src/nuklear.h:9789:14: error: ‘NK_VERTEX_POSITION’ undeclared (first use in this function)
+ 9789 |         case NK_VERTEX_POSITION: nk_draw_vertex_element(address, &pos.x, 2, elem_iter->format); break;
+      |              ^~~~~~~~~~~~~~~~~~
+src/nuklear.h:9789:86: error: invalid use of undefined type ‘const struct nk_draw_vertex_layout_element’
+ 9789 |         case NK_VERTEX_POSITION: nk_draw_vertex_element(address, &pos.x, 2, elem_iter->format); break;
+      |                                                                                      ^~
+src/nuklear.h:9790:14: error: ‘NK_VERTEX_TEXCOORD’ undeclared (first use in this function)
+ 9790 |         case NK_VERTEX_TEXCOORD: nk_draw_vertex_element(address, &uv.x, 2, elem_iter->format); break;
+      |              ^~~~~~~~~~~~~~~~~~
+src/nuklear.h:9790:85: error: invalid use of undefined type ‘const struct nk_draw_vertex_layout_element’
+ 9790 |         case NK_VERTEX_TEXCOORD: nk_draw_vertex_element(address, &uv.x, 2, elem_iter->format); break;
+      |                                                                                     ^~
+src/nuklear.h:9791:14: error: ‘NK_VERTEX_COLOR’ undeclared (first use in this function)
+ 9791 |         case NK_VERTEX_COLOR: nk_draw_vertex_color(address, &color.r, elem_iter->format); break;
+      |              ^~~~~~~~~~~~~~~
+src/nuklear.h:9791:80: error: invalid use of undefined type ‘const struct nk_draw_vertex_layout_element’
+ 9791 |         case NK_VERTEX_COLOR: nk_draw_vertex_color(address, &color.r, elem_iter->format); break;
+      |                                                                                ^~
+src/nuklear.h:9793:18: error: increment of pointer to an incomplete type ‘const struct nk_draw_vertex_layout_element’
+ 9793 |         elem_iter++;
+      |                  ^~
+src/nuklear.h: At top level:
+src/nuklear.h:9799:66: warning: ISO C forbids forward references to ‘enum’ types [-Wpedantic]
+ 9799 |     const unsigned int points_count, struct nk_color color, enum nk_draw_list_stroke closed,
+      |                                                                  ^~~~~~~~~~~~~~~~~~~
+src/nuklear.h:9799:66: warning: ‘enum nk_draw_list_stroke’ declared inside parameter list will not be visible outside of this definition or declaration
+src/nuklear.h:9799:86: error: parameter 5 (‘closed’) has incomplete type
+ 9799 |     const unsigned int points_count, struct nk_color color, enum nk_draw_list_stroke closed,
+      |                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+src/nuklear.h: In function ‘nk_draw_list_stroke_poly_line’:
+src/nuklear.h:9809:46: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9809 |     color.a = (nk_byte)((float)color.a * list->config.global_alpha);
+      |                                              ^~
+src/nuklear.h:9818:46: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9818 |     color.a = (nk_byte)((float)color.a * list->config.global_alpha);
+      |                                              ^~
+src/nuklear.h:9832:29: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9832 |         nk_size index = list->vertex_count;
+      |                             ^~
+src/nuklear.h:9838:9: error: unknown type name ‘nk_draw_index’
+ 9838 |         nk_draw_index *ids = nk_draw_list_alloc_elements(list, idx_count);
+      |         ^~~~~~~~~~~~~
+src/nuklear.h:9845:65: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9845 |         vertex_offset = (nk_size)((nk_byte*)vtx - (nk_byte*)list->vertices->memory.ptr);
+      |                                                                 ^~
+src/nuklear.h:9846:28: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9846 |         nk_buffer_mark(list->vertices, NK_BUFFER_FRONT);
+      |                            ^~
+src/nuklear.h:9848:57: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9848 |         normals = (struct nk_vec2*) nk_buffer_alloc(list->vertices, NK_BUFFER_FRONT, size, pnt_align);
+      |                                                         ^~
+src/nuklear.h:9853:37: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9853 |         vtx = (void*)((nk_byte*)list->vertices->memory.ptr + vertex_offset);
+      |                                     ^~
+src/nuklear.h:9907:27: error: ‘nk_draw_index’ undeclared (first use in this function); did you mean ‘nk_draw_vertex’?
+ 9907 |                 ids[0] = (nk_draw_index)(idx2 + 0); ids[1] = (nk_draw_index)(idx1+0);
+      |                           ^~~~~~~~~~~~~
+      |                           nk_draw_vertex
+src/nuklear.h:9919:47: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9919 |                 const struct nk_vec2 uv = list->config.tex_null.uv;
+      |                                               ^~
+src/nuklear.h:9920:48: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9920 |                 vtx = nk_draw_vertex(vtx, &list->config, points[i], uv, col);
+      |                                                ^~
+src/nuklear.h:9921:48: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9921 |                 vtx = nk_draw_vertex(vtx, &list->config, temp[i*2+0], uv, col_trans);
+      |                                                ^~
+src/nuklear.h:9922:48: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9922 |                 vtx = nk_draw_vertex(vtx, &list->config, temp[i*2+1], uv, col_trans);
+      |                                                ^~
+src/nuklear.h:9984:47: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9984 |                 const struct nk_vec2 uv = list->config.tex_null.uv;
+      |                                               ^~
+src/nuklear.h:9985:48: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9985 |                 vtx = nk_draw_vertex(vtx, &list->config, temp[i*4+0], uv, col_trans);
+      |                                                ^~
+src/nuklear.h:9986:48: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9986 |                 vtx = nk_draw_vertex(vtx, &list->config, temp[i*4+1], uv, col);
+      |                                                ^~
+src/nuklear.h:9987:48: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9987 |                 vtx = nk_draw_vertex(vtx, &list->config, temp[i*4+2], uv, col);
+      |                                                ^~
+src/nuklear.h:9988:48: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9988 |                 vtx = nk_draw_vertex(vtx, &list->config, temp[i*4+3], uv, col_trans);
+      |                                                ^~
+src/nuklear.h:9992:29: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9992 |         nk_buffer_reset(list->vertices, NK_BUFFER_FRONT);
+      |                             ^~
+src/nuklear.h:9996:27: error: invalid use of undefined type ‘struct nk_draw_list’
+ 9996 |         nk_size idx = list->vertex_count;
+      |                           ^~
+src/nuklear.h:10000:24: error: ‘ids’ undeclared (first use in this function); did you mean ‘idx’?
+10000 |         nk_draw_index *ids = nk_draw_list_alloc_elements(list, idx_count);
+      |                        ^~~
+      |                        idx
+src/nuklear.h:10005:43: error: invalid use of undefined type ‘struct nk_draw_list’
+10005 |             const struct nk_vec2 uv = list->config.tex_null.uv;
+      |                                           ^~
+src/nuklear.h:10023:44: error: invalid use of undefined type ‘struct nk_draw_list’
+10023 |             vtx = nk_draw_vertex(vtx, &list->config, nk_vec2(p1.x + dy, p1.y - dx), uv, col);
+      |                                            ^~
+src/nuklear.h:10024:44: error: invalid use of undefined type ‘struct nk_draw_list’
+10024 |             vtx = nk_draw_vertex(vtx, &list->config, nk_vec2(p2.x + dy, p2.y - dx), uv, col);
+      |                                            ^~
+src/nuklear.h:10025:44: error: invalid use of undefined type ‘struct nk_draw_list’
+10025 |             vtx = nk_draw_vertex(vtx, &list->config, nk_vec2(p2.x - dy, p2.y + dx), uv, col);
+      |                                            ^~
+src/nuklear.h:10026:44: error: invalid use of undefined type ‘struct nk_draw_list’
+10026 |             vtx = nk_draw_vertex(vtx, &list->config, nk_vec2(p1.x - dy, p1.y + dx), uv, col);
+      |                                            ^~
+src/nuklear.h:9799:86: warning: unused parameter ‘closed’ [-Wunused-parameter]
+ 9799 |     const unsigned int points_count, struct nk_color color, enum nk_draw_list_stroke closed,
+      |                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+src/nuklear.h: In function ‘nk_draw_list_fill_poly_convex’:
+src/nuklear.h:10054:46: error: invalid use of undefined type ‘struct nk_draw_list’
+10054 |     color.a = (nk_byte)((float)color.a * list->config.global_alpha);
+      |                                              ^~
+src/nuklear.h:10066:29: error: invalid use of undefined type ‘struct nk_draw_list’
+10066 |         nk_size index = list->vertex_count;
+      |                             ^~
+src/nuklear.h:10072:9: error: unknown type name ‘nk_draw_index’
+10072 |         nk_draw_index *ids = nk_draw_list_alloc_elements(list, idx_count);
+      |         ^~~~~~~~~~~~~
+src/nuklear.h:10081:65: error: invalid use of undefined type ‘struct nk_draw_list’
+10081 |         vertex_offset = (nk_size)((nk_byte*)vtx - (nk_byte*)list->vertices->memory.ptr);
+      |                                                                 ^~
+src/nuklear.h:10082:28: error: invalid use of undefined type ‘struct nk_draw_list’
+10082 |         nk_buffer_mark(list->vertices, NK_BUFFER_FRONT);
+      |                            ^~
+src/nuklear.h:10084:57: error: invalid use of undefined type ‘struct nk_draw_list’
+10084 |         normals = (struct nk_vec2*) nk_buffer_alloc(list->vertices, NK_BUFFER_FRONT, size, pnt_align);
+      |                                                         ^~
+src/nuklear.h:10086:37: error: invalid use of undefined type ‘struct nk_draw_list’
+10086 |         vtx = (void*)((nk_byte*)list->vertices->memory.ptr + vertex_offset);
+      |                                     ^~
+src/nuklear.h:10090:23: error: ‘nk_draw_index’ undeclared (first use in this function); did you mean ‘nk_draw_vertex’?
+10090 |             ids[0] = (nk_draw_index)(vtx_inner_idx);
+      |                       ^~~~~~~~~~~~~
+      |                       nk_draw_vertex
+src/nuklear.h:10115:43: error: invalid use of undefined type ‘struct nk_draw_list’
+10115 |             const struct nk_vec2 uv = list->config.tex_null.uv;
+      |                                           ^~
+src/nuklear.h:10128:44: error: invalid use of undefined type ‘struct nk_draw_list’
+10128 |             vtx = nk_draw_vertex(vtx, &list->config, nk_vec2_sub(points[i1], dm), uv, col);
+      |                                            ^~
+src/nuklear.h:10129:44: error: invalid use of undefined type ‘struct nk_draw_list’
+10129 |             vtx = nk_draw_vertex(vtx, &list->config, nk_vec2_add(points[i1], dm), uv, col_trans);
+      |                                            ^~
+src/nuklear.h:10141:29: error: invalid use of undefined type ‘struct nk_draw_list’
+10141 |         nk_buffer_reset(list->vertices, NK_BUFFER_FRONT);
+      |                             ^~
+src/nuklear.h:10144:29: error: invalid use of undefined type ‘struct nk_draw_list’
+10144 |         nk_size index = list->vertex_count;
+      |                             ^~
+src/nuklear.h:10148:24: error: ‘ids’ undeclared (first use in this function)
+10148 |         nk_draw_index *ids = nk_draw_list_alloc_elements(list, idx_count);
+      |                        ^~~
+src/nuklear.h:10152:44: error: invalid use of undefined type ‘struct nk_draw_list’
+10152 |             vtx = nk_draw_vertex(vtx, &list->config, points[i], list->config.tex_null.uv, col);
+      |                                            ^~
+src/nuklear.h:10152:69: error: invalid use of undefined type ‘struct nk_draw_list’
+10152 |             vtx = nk_draw_vertex(vtx, &list->config, points[i], list->config.tex_null.uv, col);
+      |                                                                     ^~
+src/nuklear.h:10154:37: error: expected ‘;’ before ‘index’
+10154 |             ids[0] = (nk_draw_index)index;
+      |                                     ^~~~~
+      |                                     ;
+src/nuklear.h: In function ‘nk_draw_list_path_clear’:
+src/nuklear.h:10166:25: error: invalid use of undefined type ‘struct nk_draw_list’
+10166 |     nk_buffer_reset(list->buffer, NK_BUFFER_FRONT);
+      |                         ^~
+src/nuklear.h:10167:9: error: invalid use of undefined type ‘struct nk_draw_list’
+10167 |     list->path_count = 0;
+      |         ^~
+src/nuklear.h:10168:9: error: invalid use of undefined type ‘struct nk_draw_list’
+10168 |     list->path_offset = 0;
+      |         ^~
+src/nuklear.h: In function ‘nk_draw_list_path_line_to’:
+src/nuklear.h:10177:14: error: invalid use of undefined type ‘struct nk_draw_list’
+10177 |     if (!list->cmd_count)
+      |              ^~
+src/nuklear.h:10181:19: error: invalid use of undefined type ‘struct nk_draw_command’
+10181 |     if (cmd && cmd->texture.ptr != list->config.tex_null.texture.ptr)
+      |                   ^~
+src/nuklear.h:10181:40: error: invalid use of undefined type ‘struct nk_draw_list’
+10181 |     if (cmd && cmd->texture.ptr != list->config.tex_null.texture.ptr)
+      |                                        ^~
+src/nuklear.h:10182:43: error: invalid use of undefined type ‘struct nk_draw_list’
+10182 |         nk_draw_list_push_image(list, list->config.tex_null.texture);
+      |                                           ^~
+src/nuklear.h: In function ‘nk_draw_list_path_arc_to_fast’:
+src/nuklear.h:10197:42: error: invalid use of undefined type ‘struct nk_draw_list’
+10197 |             const struct nk_vec2 c = list->circle_vtx[(nk_size)a % NK_LEN(list->circle_vtx)];
+      |                                          ^~
+In file included from src/sdlutil.h:8,
+                 from src/sdlutil.c:3:
+src/nuklear.h:10197:79: error: invalid use of undefined type ‘struct nk_draw_list’
+10197 |             const struct nk_vec2 c = list->circle_vtx[(nk_size)a % NK_LEN(list->circle_vtx)];
+      |                                                                               ^~
+src/nuklear.h:5676:27: note: in definition of macro ‘NK_LEN’
+ 5676 | #define NK_LEN(a) (sizeof(a)/sizeof(a)[0])
+      |                           ^
+src/nuklear.h:10197:79: error: invalid use of undefined type ‘struct nk_draw_list’
+10197 |             const struct nk_vec2 c = list->circle_vtx[(nk_size)a % NK_LEN(list->circle_vtx)];
+      |                                                                               ^~
+src/nuklear.h:5676:37: note: in definition of macro ‘NK_LEN’
+ 5676 | #define NK_LEN(a) (sizeof(a)/sizeof(a)[0])
+      |                                     ^
+In file included from src/nuklear.h:5775,
+                 from src/sdlutil.c:15:
+src/nuklear.h: In function ‘nk_draw_list_path_curve_to’:
+src/nuklear.h:10281:19: error: invalid use of undefined type ‘struct nk_draw_list’
+10281 |     NK_ASSERT(list->path_count);
+      |                   ^~
+src/nuklear.h:10281:5: note: in expansion of macro ‘NK_ASSERT’
+10281 |     NK_ASSERT(list->path_count);
+      |     ^~~~~~~~~
+In file included from src/sdlutil.c:15:
+src/nuklear.h:10282:23: error: invalid use of undefined type ‘struct nk_draw_list’
+10282 |     if (!list || !list->path_count) return;
+      |                       ^~
+src/nuklear.h: In function ‘nk_draw_list_path_fill’:
+src/nuklear.h:10305:52: error: invalid use of undefined type ‘struct nk_draw_list’
+10305 |     points = (struct nk_vec2*)nk_buffer_memory(list->buffer);
+      |                                                    ^~
+src/nuklear.h:10306:53: error: invalid use of undefined type ‘struct nk_draw_list’
+10306 |     nk_draw_list_fill_poly_convex(list, points, list->path_count, color, list->config.shape_AA);
+      |                                                     ^~
+src/nuklear.h:10306:78: error: invalid use of undefined type ‘struct nk_draw_list’
+10306 |     nk_draw_list_fill_poly_convex(list, points, list->path_count, color, list->config.shape_AA);
+      |                                                                              ^~
+src/nuklear.h: At top level:
+src/nuklear.h:10311:10: warning: ISO C forbids forward references to ‘enum’ types [-Wpedantic]
+10311 |     enum nk_draw_list_stroke closed, float thickness)
+      |          ^~~~~~~~~~~~~~~~~~~
+src/nuklear.h:10311:10: warning: ‘enum nk_draw_list_stroke’ declared inside parameter list will not be visible outside of this definition or declaration
+src/nuklear.h:10311:30: error: parameter 3 (‘closed’) has incomplete type
+10311 |     enum nk_draw_list_stroke closed, float thickness)
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+src/nuklear.h: In function ‘nk_draw_list_path_stroke’:
+src/nuklear.h:10316:52: error: invalid use of undefined type ‘struct nk_draw_list’
+10316 |     points = (struct nk_vec2*)nk_buffer_memory(list->buffer);
+      |                                                    ^~
+src/nuklear.h:10317:53: error: invalid use of undefined type ‘struct nk_draw_list’
+10317 |     nk_draw_list_stroke_poly_line(list, points, list->path_count, color,
+      |                                                     ^~
+src/nuklear.h:10318:32: error: invalid use of undefined type ‘struct nk_draw_list’
+10318 |         closed, thickness, list->config.line_AA);
+      |                                ^~
+src/nuklear.h:10311:30: warning: unused parameter ‘closed’ [-Wunused-parameter]
+10311 |     enum nk_draw_list_stroke closed, float thickness)
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~
+src/nuklear.h: In function ‘nk_draw_list_stroke_line’:
+src/nuklear.h:10327:13: error: invalid use of undefined type ‘struct nk_draw_list’
+10327 |     if (list->line_AA == NK_ANTI_ALIASING_ON) {
+      |             ^~
+src/nuklear.h:10334:42: error: ‘NK_STROKE_OPEN’ undeclared (first use in this function)
+10334 |     nk_draw_list_path_stroke(list,  col, NK_STROKE_OPEN, thickness);
+      |                                          ^~~~~~~~~~~~~~
+src/nuklear.h: In function ‘nk_draw_list_fill_rect’:
+src/nuklear.h:10343:13: error: invalid use of undefined type ‘struct nk_draw_list’
+10343 |     if (list->line_AA == NK_ANTI_ALIASING_ON) {
+      |             ^~
+src/nuklear.h: In function ‘nk_draw_list_stroke_rect’:
+src/nuklear.h:10357:13: error: invalid use of undefined type ‘struct nk_draw_list’
+10357 |     if (list->line_AA == NK_ANTI_ALIASING_ON) {
+      |             ^~
+src/nuklear.h:10363:44: error: ‘NK_STROKE_CLOSED’ undeclared (first use in this function)
+10363 |     } nk_draw_list_path_stroke(list,  col, NK_STROKE_CLOSED, thickness);
+      |                                            ^~~~~~~~~~~~~~~~
+src/nuklear.h: In function ‘nk_draw_list_fill_rect_multi_color’:
+src/nuklear.h:10373:5: error: unknown type name ‘nk_draw_index’
+10373 |     nk_draw_index *idx;
+      |     ^~~~~~~~~~~~~
+src/nuklear.h:10374:5: error: unknown type name ‘nk_draw_index’
+10374 |     nk_draw_index index;
+      |     ^~~~~~~~~~~~~
+src/nuklear.h:10384:39: error: invalid use of undefined type ‘struct nk_draw_list’
+10384 |     nk_draw_list_push_image(list, list->config.tex_null.texture);
+      |                                       ^~
+src/nuklear.h:10385:14: error: ‘nk_draw_index’ undeclared (first use in this function); did you mean ‘nk_draw_vertex’?
+10385 |     index = (nk_draw_index)list->vertex_count;
+      |              ^~~~~~~~~~~~~
+      |              nk_draw_vertex
+src/nuklear.h:10385:28: error: expected ‘;’ before ‘list’
+10385 |     index = (nk_draw_index)list->vertex_count;
+      |                            ^~~~
+      |                            ;
+src/nuklear.h:10394:36: error: invalid use of undefined type ‘struct nk_draw_list’
+10394 |     vtx = nk_draw_vertex(vtx, &list->config, nk_vec2(rect.x, rect.y), list->config.tex_null.uv, col_left);
+      |                                    ^~
+src/nuklear.h:10394:75: error: invalid use of undefined type ‘struct nk_draw_list’
+10394 |     vtx = nk_draw_vertex(vtx, &list->config, nk_vec2(rect.x, rect.y), list->config.tex_null.uv, col_left);
+      |                                                                           ^~
+src/nuklear.h:10395:36: error: invalid use of undefined type ‘struct nk_draw_list’
+10395 |     vtx = nk_draw_vertex(vtx, &list->config, nk_vec2(rect.x + rect.w, rect.y), list->config.tex_null.uv, col_top);
+      |                                    ^~
+src/nuklear.h:10395:84: error: invalid use of undefined type ‘struct nk_draw_list’
+10395 |     vtx = nk_draw_vertex(vtx, &list->config, nk_vec2(rect.x + rect.w, rect.y), list->config.tex_null.uv, col_top);
+      |                                                                                    ^~
+src/nuklear.h:10396:36: error: invalid use of undefined type ‘struct nk_draw_list’
+10396 |     vtx = nk_draw_vertex(vtx, &list->config, nk_vec2(rect.x + rect.w, rect.y + rect.h), list->config.tex_null.uv, col_right);
+      |                                    ^~
+src/nuklear.h:10396:93: error: invalid use of undefined type ‘struct nk_draw_list’
+10396 |     vtx = nk_draw_vertex(vtx, &list->config, nk_vec2(rect.x + rect.w, rect.y + rect.h), list->config.tex_null.uv, col_right);
+      |                                                                                             ^~
+src/nuklear.h:10397:36: error: invalid use of undefined type ‘struct nk_draw_list’
+10397 |     vtx = nk_draw_vertex(vtx, &list->config, nk_vec2(rect.x, rect.y + rect.h), list->config.tex_null.uv, col_bottom);
+      |                                    ^~
+src/nuklear.h:10397:84: error: invalid use of undefined type ‘struct nk_draw_list’
+10397 |     vtx = nk_draw_vertex(vtx, &list->config, nk_vec2(rect.x, rect.y + rect.h), list->config.tex_null.uv, col_bottom);
+      |                                                                                    ^~
+src/nuklear.h: In function ‘nk_draw_list_stroke_triangle’:
+src/nuklear.h:10419:41: error: ‘NK_STROKE_CLOSED’ undeclared (first use in this function)
+10419 |     nk_draw_list_path_stroke(list, col, NK_STROKE_CLOSED, thickness);
+      |                                         ^~~~~~~~~~~~~~~~
+src/nuklear.h: In function ‘nk_draw_list_stroke_circle’:
+src/nuklear.h:10441:41: error: ‘NK_STROKE_CLOSED’ undeclared (first use in this function)
+10441 |     nk_draw_list_path_stroke(list, col, NK_STROKE_CLOSED, thickness);
+      |                                         ^~~~~~~~~~~~~~~~
+src/nuklear.h: In function ‘nk_draw_list_stroke_curve’:
+src/nuklear.h:10452:41: error: ‘NK_STROKE_OPEN’ undeclared (first use in this function)
+10452 |     nk_draw_list_path_stroke(list, col, NK_STROKE_OPEN, thickness);
+      |                                         ^~~~~~~~~~~~~~
+src/nuklear.h: In function ‘nk_draw_list_push_rect_uv’:
+src/nuklear.h:10466:5: error: unknown type name ‘nk_draw_index’
+10466 |     nk_draw_index *idx;
+      |     ^~~~~~~~~~~~~
+src/nuklear.h:10467:5: error: unknown type name ‘nk_draw_index’
+10467 |     nk_draw_index index;
+      |     ^~~~~~~~~~~~~
+src/nuklear.h:10477:14: error: ‘nk_draw_index’ undeclared (first use in this function); did you mean ‘nk_draw_vertex’?
+10477 |     index = (nk_draw_index)list->vertex_count;
+      |              ^~~~~~~~~~~~~
+      |              nk_draw_vertex
+src/nuklear.h:10477:28: error: expected ‘;’ before ‘list’
+10477 |     index = (nk_draw_index)list->vertex_count;
+      |                            ^~~~
+      |                            ;
+src/nuklear.h:10486:36: error: invalid use of undefined type ‘struct nk_draw_list’
+10486 |     vtx = nk_draw_vertex(vtx, &list->config, a, uva, col);
+      |                                    ^~
+src/nuklear.h:10487:36: error: invalid use of undefined type ‘struct nk_draw_list’
+10487 |     vtx = nk_draw_vertex(vtx, &list->config, b, uvb, col);
+      |                                    ^~
+src/nuklear.h:10488:36: error: invalid use of undefined type ‘struct nk_draw_list’
+10488 |     vtx = nk_draw_vertex(vtx, &list->config, c, uvc, col);
+      |                                    ^~
+src/nuklear.h:10489:36: error: invalid use of undefined type ‘struct nk_draw_list’
+10489 |     vtx = nk_draw_vertex(vtx, &list->config, d, uvd, col);
+      |                                    ^~
+src/nuklear.h: In function ‘nk_draw_list_add_text’:
+src/nuklear.h:10523:31: error: storage size of ‘g’ isn’t known
+10523 |     struct nk_user_font_glyph g;
+      |                               ^
+In file included from src/sdlutil.h:8,
+                 from src/sdlutil.c:3:
+src/nuklear.h:10528:13: error: invalid use of undefined type ‘struct nk_draw_list’
+10528 |         list->clip_rect.x, list->clip_rect.y, list->clip_rect.w, list->clip_rect.h)) return;
+      |             ^~
+src/nuklear.h:5682:7: note: in definition of macro ‘NK_INTERSECT’
+ 5682 |     ((x1 < (x0 + w0)) && (x0 < (x1 + w1)) && \
+      |       ^~
+src/nuklear.h:10528:13: error: invalid use of undefined type ‘struct nk_draw_list’
+10528 |         list->clip_rect.x, list->clip_rect.y, list->clip_rect.w, list->clip_rect.h)) return;
+      |             ^~
+src/nuklear.h:5682:33: note: in definition of macro ‘NK_INTERSECT’
+ 5682 |     ((x1 < (x0 + w0)) && (x0 < (x1 + w1)) && \
+      |                                 ^~
+src/nuklear.h:10528:51: error: invalid use of undefined type ‘struct nk_draw_list’
+10528 |         list->clip_rect.x, list->clip_rect.y, list->clip_rect.w, list->clip_rect.h)) return;
+      |                                                   ^~
+src/nuklear.h:5682:38: note: in definition of macro ‘NK_INTERSECT’
+ 5682 |     ((x1 < (x0 + w0)) && (x0 < (x1 + w1)) && \
+      |                                      ^~
+src/nuklear.h:10528:32: error: invalid use of undefined type ‘struct nk_draw_list’
+10528 |         list->clip_rect.x, list->clip_rect.y, list->clip_rect.w, list->clip_rect.h)) return;
+      |                                ^~
+src/nuklear.h:5683:6: note: in definition of macro ‘NK_INTERSECT’
+ 5683 |     (y1 < (y0 + h0)) && (y0 < (y1 + h1)))
+      |      ^~
+src/nuklear.h:10528:32: error: invalid use of undefined type ‘struct nk_draw_list’
+10528 |         list->clip_rect.x, list->clip_rect.y, list->clip_rect.w, list->clip_rect.h)) return;
+      |                                ^~
+src/nuklear.h:5683:32: note: in definition of macro ‘NK_INTERSECT’
+ 5683 |     (y1 < (y0 + h0)) && (y0 < (y1 + h1)))
+      |                                ^~
+src/nuklear.h:10528:70: error: invalid use of undefined type ‘struct nk_draw_list’
+10528 |         list->clip_rect.x, list->clip_rect.y, list->clip_rect.w, list->clip_rect.h)) return;
+      |                                                                      ^~
+src/nuklear.h:5683:37: note: in definition of macro ‘NK_INTERSECT’
+ 5683 |     (y1 < (y0 + h0)) && (y0 < (y1 + h1)))
+      |                                     ^~
+In file included from src/sdlutil.c:15:
+src/nuklear.h:10530:39: error: ‘const struct nk_user_font’ has no member named ‘texture’
+10530 |     nk_draw_list_push_image(list, font->texture);
+      |                                       ^~
+src/nuklear.h:10536:40: error: invalid use of undefined type ‘struct nk_draw_list’
+10536 |     fg.a = (nk_byte)((float)fg.a * list->config.global_alpha);
+      |                                        ^~
+src/nuklear.h:10544:13: error: ‘const struct nk_user_font’ has no member named ‘query’
+10544 |         font->query(font->userdata, font_height, &g, unicode,
+      |             ^~
+src/nuklear.h:10523:31: warning: unused variable ‘g’ [-Wunused-variable]
+10523 |     struct nk_user_font_glyph g;
+      |                               ^
+src/nuklear.h: In function ‘nk_convert’:
+src/nuklear.h:10579:28: error: ‘struct nk_context’ has no member named ‘draw_list’
+10579 |     nk_draw_list_setup(&ctx->draw_list, config, cmds, vertices, elements,
+      |                            ^~
+src/nuklear.h:10590:39: error: ‘struct nk_context’ has no member named ‘draw_list’
+10590 |             nk_draw_list_add_clip(&ctx->draw_list, nk_rect(s->x, s->y, s->w, s->h));
+      |                                       ^~
+src/nuklear.h:10594:42: error: ‘struct nk_context’ has no member named ‘draw_list’
+10594 |             nk_draw_list_stroke_line(&ctx->draw_list, nk_vec2(l->begin.x, l->begin.y),
+      |                                          ^~
+src/nuklear.h:10599:43: error: ‘struct nk_context’ has no member named ‘draw_list’
+10599 |             nk_draw_list_stroke_curve(&ctx->draw_list, nk_vec2(q->begin.x, q->begin.y),
+      |                                           ^~
+src/nuklear.h:10606:42: error: ‘struct nk_context’ has no member named ‘draw_list’
+10606 |             nk_draw_list_stroke_rect(&ctx->draw_list, nk_rect(r->x, r->y, r->w, r->h),
+      |                                          ^~
+src/nuklear.h:10611:40: error: ‘struct nk_context’ has no member named ‘draw_list’
+10611 |             nk_draw_list_fill_rect(&ctx->draw_list, nk_rect(r->x, r->y, r->w, r->h),
+      |                                        ^~
+src/nuklear.h:10616:52: error: ‘struct nk_context’ has no member named ‘draw_list’
+10616 |             nk_draw_list_fill_rect_multi_color(&ctx->draw_list, nk_rect(r->x, r->y, r->w, r->h),
+      |                                                    ^~
+src/nuklear.h:10621:44: error: ‘struct nk_context’ has no member named ‘draw_list’
+10621 |             nk_draw_list_stroke_circle(&ctx->draw_list, nk_vec2((float)c->x + (float)c->w/2,
+      |                                            ^~
+src/nuklear.h:10627:42: error: ‘struct nk_context’ has no member named ‘draw_list’
+10627 |             nk_draw_list_fill_circle(&ctx->draw_list, nk_vec2((float)c->x + (float)c->w/2,
+      |                                          ^~
+src/nuklear.h:10633:43: error: ‘struct nk_context’ has no member named ‘draw_list’
+10633 |             nk_draw_list_path_line_to(&ctx->draw_list, nk_vec2(c->cx, c->cy));
+      |                                           ^~
+src/nuklear.h:10634:42: error: ‘struct nk_context’ has no member named ‘draw_list’
+10634 |             nk_draw_list_path_arc_to(&ctx->draw_list, nk_vec2(c->cx, c->cy), c->r,
+      |                                          ^~
+src/nuklear.h:10636:42: error: ‘struct nk_context’ has no member named ‘draw_list’
+10636 |             nk_draw_list_path_stroke(&ctx->draw_list, c->color, NK_STROKE_CLOSED, c->line_thickness);
+      |                                          ^~
+src/nuklear.h:10636:65: error: ‘NK_STROKE_CLOSED’ undeclared (first use in this function)
+10636 |             nk_draw_list_path_stroke(&ctx->draw_list, c->color, NK_STROKE_CLOSED, c->line_thickness);
+      |                                                                 ^~~~~~~~~~~~~~~~
+src/nuklear.h:10640:43: error: ‘struct nk_context’ has no member named ‘draw_list’
+10640 |             nk_draw_list_path_line_to(&ctx->draw_list, nk_vec2(c->cx, c->cy));
+      |                                           ^~
+src/nuklear.h:10641:42: error: ‘struct nk_context’ has no member named ‘draw_list’
+10641 |             nk_draw_list_path_arc_to(&ctx->draw_list, nk_vec2(c->cx, c->cy), c->r,
+      |                                          ^~
+src/nuklear.h:10643:40: error: ‘struct nk_context’ has no member named ‘draw_list’
+10643 |             nk_draw_list_path_fill(&ctx->draw_list, c->color);
+      |                                        ^~
+src/nuklear.h:10647:46: error: ‘struct nk_context’ has no member named ‘draw_list’
+10647 |             nk_draw_list_stroke_triangle(&ctx->draw_list, nk_vec2(t->a.x, t->a.y),
+      |                                              ^~
+src/nuklear.h:10653:44: error: ‘struct nk_context’ has no member named ‘draw_list’
+10653 |             nk_draw_list_fill_triangle(&ctx->draw_list, nk_vec2(t->a.x, t->a.y),
+      |                                            ^~
+src/nuklear.h:10661:47: error: ‘struct nk_context’ has no member named ‘draw_list’
+10661 |                 nk_draw_list_path_line_to(&ctx->draw_list, pnt);
+      |                                               ^~
+src/nuklear.h:10663:42: error: ‘struct nk_context’ has no member named ‘draw_list’
+10663 |             nk_draw_list_path_stroke(&ctx->draw_list, p->color, NK_STROKE_CLOSED, p->line_thickness);
+      |                                          ^~
+src/nuklear.h:10670:47: error: ‘struct nk_context’ has no member named ‘draw_list’
+10670 |                 nk_draw_list_path_line_to(&ctx->draw_list, pnt);
+      |                                               ^~
+src/nuklear.h:10672:40: error: ‘struct nk_context’ has no member named ‘draw_list’
+10672 |             nk_draw_list_path_fill(&ctx->draw_list, p->color);
+      |                                        ^~
+src/nuklear.h:10679:47: error: ‘struct nk_context’ has no member named ‘draw_list’
+10679 |                 nk_draw_list_path_line_to(&ctx->draw_list, pnt);
+      |                                               ^~
+src/nuklear.h:10681:42: error: ‘struct nk_context’ has no member named ‘draw_list’
+10681 |             nk_draw_list_path_stroke(&ctx->draw_list, p->color, NK_STROKE_OPEN, p->line_thickness);
+      |                                          ^~
+src/nuklear.h:10681:65: error: ‘NK_STROKE_OPEN’ undeclared (first use in this function)
+10681 |             nk_draw_list_path_stroke(&ctx->draw_list, p->color, NK_STROKE_OPEN, p->line_thickness);
+      |                                                                 ^~~~~~~~~~~~~~
+src/nuklear.h:10685:39: error: ‘struct nk_context’ has no member named ‘draw_list’
+10685 |             nk_draw_list_add_text(&ctx->draw_list, t->font, nk_rect(t->x, t->y, t->w, t->h),
+      |                                       ^~
+src/nuklear.h:10690:40: error: ‘struct nk_context’ has no member named ‘draw_list’
+10690 |             nk_draw_list_add_image(&ctx->draw_list, i->img, nk_rect(i->x, i->y, i->w, i->h), i->col);
+      |                                        ^~
+src/nuklear.h:10694:29: error: ‘struct nk_context’ has no member named ‘draw_list’
+10694 |             c->callback(&ctx->draw_list, c->x, c->y, c->w, c->h, c->callback_data);
+      |                             ^~
+src/nuklear.h: In function ‘nk__draw_begin’:
+src/nuklear.h:10708:36: error: ‘const struct nk_context’ has no member named ‘draw_list’
+10708 |     return nk__draw_list_begin(&ctx->draw_list, buffer);
+      |                                    ^~
+src/nuklear.h: In function ‘nk__draw_end’:
+src/nuklear.h:10713:34: error: ‘const struct nk_context’ has no member named ‘draw_list’
+10713 |     return nk__draw_list_end(&ctx->draw_list, buffer);
+      |                                  ^~
+src/nuklear.h: In function ‘nk__draw_next’:
+src/nuklear.h:10719:48: error: ‘const struct nk_context’ has no member named ‘draw_list’
+10719 |     return nk__draw_list_next(cmd, buffer, &ctx->draw_list);
+      |                                                ^~
+In file included from src/sdlutil.c:15:
+src/nuklear.h: At top level:
+src/nuklear.h:16543:12: warning: ‘struct nk_font_config’ declared inside parameter list will not be visible outside of this definition or declaration
+16543 |     struct nk_font_config *config_list, int count)
+      |            ^~~~~~~~~~~~~~
+src/nuklear.h: In function ‘nk_font_baker_memory’:
+src/nuklear.h:16557:47: error: invalid use of undefined type ‘struct nk_font_config’
+16557 |     for (iter = config_list; iter; iter = iter->next) {
+      |                                               ^~
+src/nuklear.h:16559:19: error: invalid use of undefined type ‘struct nk_font_config’
+16559 |         do {if (!i->range) iter->range = nk_font_default_glyph_ranges();
+      |                   ^~
+src/nuklear.h:16559:32: error: invalid use of undefined type ‘struct nk_font_config’
+16559 |         do {if (!i->range) iter->range = nk_font_default_glyph_ranges();
+      |                                ^~
+src/nuklear.h:16560:43: error: invalid use of undefined type ‘struct nk_font_config’
+16560 |             range_count = nk_range_count(i->range);
+      |                                           ^~
+src/nuklear.h:16562:51: error: invalid use of undefined type ‘struct nk_font_config’
+16562 |             *glyph_count += nk_range_glyph_count(i->range, range_count);
+      |                                                   ^~
+src/nuklear.h:16563:24: error: invalid use of undefined type ‘struct nk_font_config’
+16563 |         } while ((i = i->n) != iter);
+      |                        ^~
+src/nuklear.h: At top level:
+src/nuklear.h:16590:18: warning: ‘struct nk_font_config’ declared inside parameter list will not be visible outside of this definition or declaration
+16590 |     const struct nk_font_config *config_list, int count,
+      |                  ^~~~~~~~~~~~~~
+src/nuklear.h: In function ‘nk_font_bake_pack’:
+src/nuklear.h:16608:75: error: invalid use of undefined type ‘const struct nk_font_config’
+16608 |     for (config_iter = config_list; config_iter; config_iter = config_iter->next) {
+      |                                                                           ^~
+src/nuklear.h:16610:44: error: invalid use of undefined type ‘const struct nk_font_config’
+16610 |         do {range_count = nk_range_count(it->range);
+      |                                            ^~
+src/nuklear.h:16612:57: error: invalid use of undefined type ‘const struct nk_font_config’
+16612 |             total_glyph_count += nk_range_glyph_count(it->range, range_count);
+      |                                                         ^~
+src/nuklear.h:16613:26: error: invalid use of undefined type ‘const struct nk_font_config’
+16613 |         } while ((it = it->n) != config_iter);
+      |                          ^~
+src/nuklear.h:16616:75: error: invalid use of undefined type ‘const struct nk_font_config’
+16616 |     for (config_iter = config_list; config_iter; config_iter = config_iter->next) {
+      |                                                                           ^~
+src/nuklear.h:16622:68: error: invalid use of undefined type ‘const struct nk_font_config’
+16622 |             if (!stbtt_InitFont(font_info, (const unsigned char*)it->ttf_blob, stbtt_GetFontOffsetForIndex((const unsigned char*)it->ttf_blob, 0)))
+      |                                                                    ^~
+src/nuklear.h:16622:132: error: invalid use of undefined type ‘const struct nk_font_config’
+16622 |             if (!stbtt_InitFont(font_info, (const unsigned char*)it->ttf_blob, stbtt_GetFontOffsetForIndex((const unsigned char*)it->ttf_blob, 0)))
+      |                                                                                                                                    ^~
+src/nuklear.h:16624:26: error: invalid use of undefined type ‘const struct nk_font_config’
+16624 |         } while ((it = it->n) != config_iter);
+      |                          ^~
+src/nuklear.h:16654:38: error: invalid use of undefined type ‘const struct nk_font_config’
+16654 |             config_iter = config_iter->next) {
+      |                                      ^~
+src/nuklear.h:16664:36: error: invalid use of undefined type ‘const struct nk_font_config’
+16664 |                 for (in_range = cfg->range; in_range[0] && in_range[1]; in_range += 2) {
+      |                                    ^~
+src/nuklear.h:16674:36: error: invalid use of undefined type ‘const struct nk_font_config’
+16674 |                     in_range = &cfg->range[i * 2];
+      |                                    ^~
+src/nuklear.h:16675:51: error: invalid use of undefined type ‘const struct nk_font_config’
+16675 |                     tmp->ranges[i].font_size = cfg->size;
+      |                                                   ^~
+src/nuklear.h:16685:59: error: invalid use of undefined type ‘const struct nk_font_config’
+16685 |                 stbtt_PackSetOversampling(&baker->spc, cfg->oversample_h, cfg->oversample_v);
+      |                                                           ^~
+src/nuklear.h:16685:78: error: invalid use of undefined type ‘const struct nk_font_config’
+16685 |                 stbtt_PackSetOversampling(&baker->spc, cfg->oversample_h, cfg->oversample_v);
+      |                                                                              ^~
+src/nuklear.h:16695:30: error: invalid use of undefined type ‘const struct nk_font_config’
+16695 |             } while ((it = it->n) != config_iter);
+      |                              ^~
+src/nuklear.h: At top level:
+src/nuklear.h:16708:18: warning: ‘struct nk_font_config’ declared inside parameter list will not be visible outside of this definition or declaration
+16708 |     const struct nk_font_config *config_list, int font_count)
+      |                  ^~~~~~~~~~~~~~
+src/nuklear.h:16707:12: warning: ‘struct nk_font_glyph’ declared inside parameter list will not be visible outside of this definition or declaration
+16707 |     struct nk_font_glyph *glyphs, int glyphs_count,
+      |            ^~~~~~~~~~~~~
+src/nuklear.h: In function ‘nk_font_bake’:
+src/nuklear.h:16731:34: error: invalid use of undefined type ‘const struct nk_font_config’
+16731 |         config_iter = config_iter->next) {
+      |                                  ^~
+src/nuklear.h:16735:55: error: invalid use of undefined type ‘const struct nk_font_config’
+16735 |             stbtt_PackSetOversampling(&baker->spc, cfg->oversample_h, cfg->oversample_v);
+      |                                                       ^~
+src/nuklear.h:16735:74: error: invalid use of undefined type ‘const struct nk_font_config’
+16735 |             stbtt_PackSetOversampling(&baker->spc, cfg->oversample_h, cfg->oversample_v);
+      |                                                                          ^~
+src/nuklear.h:16737:26: error: invalid use of undefined type ‘const struct nk_font_config’
+16737 |         } while ((it = it->n) != config_iter);
+      |                          ^~
+src/nuklear.h:16742:34: error: invalid use of undefined type ‘const struct nk_font_config’
+16742 |         config_iter = config_iter->next) {
+      |                                  ^~
+src/nuklear.h:16749:49: error: invalid use of undefined type ‘const struct nk_font_config’
+16749 |             struct nk_baked_font *dst_font = cfg->font;
+      |                                                 ^~
+src/nuklear.h:16751:73: error: invalid use of undefined type ‘const struct nk_font_config’
+16751 |             float font_scale = stbtt_ScaleForPixelHeight(&tmp->info, cfg->size);
+      |                                                                         ^~
+src/nuklear.h:16757:21: error: invalid use of undefined type ‘const struct nk_font_config’
+16757 |             if (!cfg->merge_mode) {
+      |                     ^~
+src/nuklear.h:16758:25: error: invalid use of undefined type ‘struct nk_baked_font’
+16758 |                 dst_font->ranges = cfg->range;
+      |                         ^~
+src/nuklear.h:16758:39: error: invalid use of undefined type ‘const struct nk_font_config’
+16758 |                 dst_font->ranges = cfg->range;
+      |                                       ^~
+src/nuklear.h:16759:25: error: invalid use of undefined type ‘struct nk_baked_font’
+16759 |                 dst_font->height = cfg->size;
+      |                         ^~
+src/nuklear.h:16759:39: error: invalid use of undefined type ‘const struct nk_font_config’
+16759 |                 dst_font->height = cfg->size;
+      |                                       ^~
+src/nuklear.h:16760:25: error: invalid use of undefined type ‘struct nk_baked_font’
+16760 |                 dst_font->ascent = ((float)unscaled_ascent * font_scale);
+      |                         ^~
+src/nuklear.h:16761:25: error: invalid use of undefined type ‘struct nk_baked_font’
+16761 |                 dst_font->descent = ((float)unscaled_descent * font_scale);
+      |                         ^~
+src/nuklear.h:16762:25: error: invalid use of undefined type ‘struct nk_baked_font’
+16762 |                 dst_font->glyph_offset = glyph_n;
+      |                         ^~
+src/nuklear.h:16767:25: error: invalid use of undefined type ‘struct nk_baked_font’
+16767 |                 dst_font->glyph_count = 0;
+      |                         ^~
+src/nuklear.h:16788:45: error: invalid use of undefined type ‘struct nk_baked_font’
+16788 |                     glyph = &glyphs[dst_font->glyph_offset + dst_font->glyph_count + (unsigned int)glyph_count];
+      |                                             ^~
+src/nuklear.h:16788:70: error: invalid use of undefined type ‘struct nk_baked_font’
+16788 |                     glyph = &glyphs[dst_font->glyph_offset + dst_font->glyph_count + (unsigned int)glyph_count];
+      |                                                                      ^~
+src/nuklear.h:16789:26: error: invalid use of undefined type ‘struct nk_font_glyph’
+16789 |                     glyph->codepoint = codepoint;
+      |                          ^~
+src/nuklear.h:16790:26: error: invalid use of undefined type ‘struct nk_font_glyph’
+16790 |                     glyph->x0 = q.x0; glyph->y0 = q.y0;
+      |                          ^~
+src/nuklear.h:16790:44: error: invalid use of undefined type ‘struct nk_font_glyph’
+16790 |                     glyph->x0 = q.x0; glyph->y0 = q.y0;
+      |                                            ^~
+src/nuklear.h:16791:26: error: invalid use of undefined type ‘struct nk_font_glyph’
+16791 |                     glyph->x1 = q.x1; glyph->y1 = q.y1;
+      |                          ^~
+src/nuklear.h:16791:44: error: invalid use of undefined type ‘struct nk_font_glyph’
+16791 |                     glyph->x1 = q.x1; glyph->y1 = q.y1;
+      |                                            ^~
+src/nuklear.h:16792:26: error: invalid use of undefined type ‘struct nk_font_glyph’
+16792 |                     glyph->y0 += (dst_font->ascent + 0.5f);
+      |                          ^~
+src/nuklear.h:16792:43: error: invalid use of undefined type ‘struct nk_baked_font’
+16792 |                     glyph->y0 += (dst_font->ascent + 0.5f);
+      |                                           ^~
+src/nuklear.h:16793:26: error: invalid use of undefined type ‘struct nk_font_glyph’
+16793 |                     glyph->y1 += (dst_font->ascent + 0.5f);
+      |                          ^~
+src/nuklear.h:16793:43: error: invalid use of undefined type ‘struct nk_baked_font’
+16793 |                     glyph->y1 += (dst_font->ascent + 0.5f);
+      |                                           ^~
+src/nuklear.h:16794:26: error: invalid use of undefined type ‘struct nk_font_glyph’
+16794 |                     glyph->w = glyph->x1 - glyph->x0 + 0.5f;
+      |                          ^~
+src/nuklear.h:16794:37: error: invalid use of undefined type ‘struct nk_font_glyph’
+16794 |                     glyph->w = glyph->x1 - glyph->x0 + 0.5f;
+      |                                     ^~
+src/nuklear.h:16794:49: error: invalid use of undefined type ‘struct nk_font_glyph’
+16794 |                     glyph->w = glyph->x1 - glyph->x0 + 0.5f;
+      |                                                 ^~
+src/nuklear.h:16795:26: error: invalid use of undefined type ‘struct nk_font_glyph’
+16795 |                     glyph->h = glyph->y1 - glyph->y0;
+      |                          ^~
+src/nuklear.h:16795:37: error: invalid use of undefined type ‘struct nk_font_glyph’
+16795 |                     glyph->h = glyph->y1 - glyph->y0;
+      |                                     ^~
+src/nuklear.h:16795:49: error: invalid use of undefined type ‘struct nk_font_glyph’
+16795 |                     glyph->h = glyph->y1 - glyph->y0;
+      |                                                 ^~
+src/nuklear.h:16797:28: error: invalid use of undefined type ‘const struct nk_font_config’
+16797 |                     if (cfg->coord_type == NK_COORD_PIXEL) {
+      |                            ^~
+src/nuklear.h:16797:44: error: ‘NK_COORD_PIXEL’ undeclared (first use in this function)
+16797 |                     if (cfg->coord_type == NK_COORD_PIXEL) {
+      |                                            ^~~~~~~~~~~~~~
+src/nuklear.h:16798:30: error: invalid use of undefined type ‘struct nk_font_glyph’
+16798 |                         glyph->u0 = q.s0 * (float)width;
+      |                              ^~
+src/nuklear.h:16799:30: error: invalid use of undefined type ‘struct nk_font_glyph’
+16799 |                         glyph->v0 = q.t0 * (float)height;
+      |                              ^~
+src/nuklear.h:16800:30: error: invalid use of undefined type ‘struct nk_font_glyph’
+16800 |                         glyph->u1 = q.s1 * (float)width;
+      |                              ^~
+src/nuklear.h:16801:30: error: invalid use of undefined type ‘struct nk_font_glyph’
+16801 |                         glyph->v1 = q.t1 * (float)height;
+      |                              ^~
+src/nuklear.h:16803:30: error: invalid use of undefined type ‘struct nk_font_glyph’
+16803 |                         glyph->u0 = q.s0;
+      |                              ^~
+src/nuklear.h:16804:30: error: invalid use of undefined type ‘struct nk_font_glyph’
+16804 |                         glyph->v0 = q.t0;
+      |                              ^~
+src/nuklear.h:16805:30: error: invalid use of undefined type ‘struct nk_font_glyph’
+16805 |                         glyph->u1 = q.s1;
+      |                              ^~
+src/nuklear.h:16806:30: error: invalid use of undefined type ‘struct nk_font_glyph’
+16806 |                         glyph->v1 = q.t1;
+      |                              ^~
+src/nuklear.h:16808:26: error: invalid use of undefined type ‘struct nk_font_glyph’
+16808 |                     glyph->xadvance = (pc->xadvance + cfg->spacing.x);
+      |                          ^~
+src/nuklear.h:16808:58: error: invalid use of undefined type ‘const struct nk_font_config’
+16808 |                     glyph->xadvance = (pc->xadvance + cfg->spacing.x);
+      |                                                          ^~
+src/nuklear.h:16809:28: error: invalid use of undefined type ‘const struct nk_font_config’
+16809 |                     if (cfg->pixel_snap)
+      |                            ^~
+src/nuklear.h:16810:30: error: invalid use of undefined type ‘struct nk_font_glyph’
+16810 |                         glyph->xadvance = (float)(int)(glyph->xadvance + 0.5f);
+      |                              ^~
+src/nuklear.h:16810:61: error: invalid use of undefined type ‘struct nk_font_glyph’
+16810 |                         glyph->xadvance = (float)(int)(glyph->xadvance + 0.5f);
+      |                                                             ^~
+src/nuklear.h:16814:21: error: invalid use of undefined type ‘struct nk_baked_font’
+16814 |             dst_font->glyph_count += glyph_count;
+      |                     ^~
+src/nuklear.h:16816:26: error: invalid use of undefined type ‘const struct nk_font_config’
+16816 |         } while ((it = it->n) != config_iter);
+      |                          ^~
+In file included from src/nuklear.h:11823,
+                 from src/sdlutil.c:15:
+src/nuklear.h: In function ‘nk_font_text_width’:
+src/nuklear.h:16883:19: error: invalid use of undefined type ‘struct nk_font’
+16883 |     NK_ASSERT(font->glyphs);
+      |                   ^~
+src/nuklear.h:16883:5: note: in expansion of macro ‘NK_ASSERT’
+16883 |     NK_ASSERT(font->glyphs);
+      |     ^~~~~~~~~
+In file included from src/sdlutil.c:15:
+src/nuklear.h:16887:24: error: invalid use of undefined type ‘struct nk_font’
+16887 |     scale = height/font->info.height;
+      |                        ^~
+src/nuklear.h:16895:13: warning: implicit declaration of function ‘nk_font_find_glyph’ [-Wimplicit-function-declaration]
+16895 |         g = nk_font_find_glyph(font, unicode);
+      |             ^~~~~~~~~~~~~~~~~~
+src/nuklear.h:16895:11: warning: assignment to ‘const struct nk_font_glyph *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+16895 |         g = nk_font_find_glyph(font, unicode);
+      |           ^
+src/nuklear.h:16896:24: error: invalid use of undefined type ‘const struct nk_font_glyph’
+16896 |         text_width += g->xadvance * scale;
+      |                        ^~
+In file included from src/nuklear.h:11823,
+                 from src/sdlutil.c:15:
+src/nuklear.h: In function ‘nk_font_query_font_glyph’:
+src/nuklear.h:16918:19: error: invalid use of undefined type ‘struct nk_font’
+16918 |     NK_ASSERT(font->glyphs);
+      |                   ^~
+src/nuklear.h:16918:5: note: in expansion of macro ‘NK_ASSERT’
+16918 |     NK_ASSERT(font->glyphs);
+      |     ^~~~~~~~~
+In file included from src/sdlutil.c:15:
+src/nuklear.h:16922:24: error: invalid use of undefined type ‘struct nk_font’
+16922 |     scale = height/font->info.height;
+      |                        ^~
+src/nuklear.h:16923:7: warning: assignment to ‘const struct nk_font_glyph *’ from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+16923 |     g = nk_font_find_glyph(font, codepoint);
+      |       ^
+src/nuklear.h:16924:10: error: invalid use of undefined type ‘struct nk_user_font_glyph’
+16924 |     glyph->width = (g->x1 - g->x0) * scale;
+      |          ^~
+src/nuklear.h:16924:22: error: invalid use of undefined type ‘const struct nk_font_glyph’
+16924 |     glyph->width = (g->x1 - g->x0) * scale;
+      |                      ^~
+src/nuklear.h:16924:30: error: invalid use of undefined type ‘const struct nk_font_glyph’
+16924 |     glyph->width = (g->x1 - g->x0) * scale;
+      |                              ^~
+src/nuklear.h:16925:10: error: invalid use of undefined type ‘struct nk_user_font_glyph’
+16925 |     glyph->height = (g->y1 - g->y0) * scale;
+      |          ^~
+src/nuklear.h:16925:23: error: invalid use of undefined type ‘const struct nk_font_glyph’
+16925 |     glyph->height = (g->y1 - g->y0) * scale;
+      |                       ^~
+src/nuklear.h:16925:31: error: invalid use of undefined type ‘const struct nk_font_glyph’
+16925 |     glyph->height = (g->y1 - g->y0) * scale;
+      |                               ^~
+src/nuklear.h:16926:10: error: invalid use of undefined type ‘struct nk_user_font_glyph’
+16926 |     glyph->offset = nk_vec2(g->x0 * scale, g->y0 * scale);
+      |          ^~
+src/nuklear.h:16926:30: error: invalid use of undefined type ‘const struct nk_font_glyph’
+16926 |     glyph->offset = nk_vec2(g->x0 * scale, g->y0 * scale);
+      |                              ^~
+src/nuklear.h:16926:45: error: invalid use of undefined type ‘const struct nk_font_glyph’
+16926 |     glyph->offset = nk_vec2(g->x0 * scale, g->y0 * scale);
+      |                                             ^~
+src/nuklear.h:16927:10: error: invalid use of undefined type ‘struct nk_user_font_glyph’
+16927 |     glyph->xadvance = (g->xadvance * scale);
+      |          ^~
+src/nuklear.h:16927:25: error: invalid use of undefined type ‘const struct nk_font_glyph’
+16927 |     glyph->xadvance = (g->xadvance * scale);
+      |                         ^~
+src/nuklear.h:16928:10: error: invalid use of undefined type ‘struct nk_user_font_glyph’
+16928 |     glyph->uv[0] = nk_vec2(g->u0, g->v0);
+      |          ^~
+src/nuklear.h:16928:29: error: invalid use of undefined type ‘const struct nk_font_glyph’
+16928 |     glyph->uv[0] = nk_vec2(g->u0, g->v0);
+      |                             ^~
+src/nuklear.h:16928:36: error: invalid use of undefined type ‘const struct nk_font_glyph’
+16928 |     glyph->uv[0] = nk_vec2(g->u0, g->v0);
+      |                                    ^~
+src/nuklear.h:16929:10: error: invalid use of undefined type ‘struct nk_user_font_glyph’
+16929 |     glyph->uv[1] = nk_vec2(g->u1, g->v1);
+      |          ^~
+src/nuklear.h:16929:29: error: invalid use of undefined type ‘const struct nk_font_glyph’
+16929 |     glyph->uv[1] = nk_vec2(g->u1, g->v1);
+      |                             ^~
+src/nuklear.h:16929:36: error: invalid use of undefined type ‘const struct nk_font_glyph’
+16929 |     glyph->uv[1] = nk_vec2(g->u1, g->v1);
+      |                                    ^~
+src/nuklear.h: At top level:
+src/nuklear.h:16933:27: warning: ‘struct nk_font’ declared inside parameter list will not be visible outside of this definition or declaration
+16933 | nk_font_find_glyph(struct nk_font *font, nk_rune unicode)
+      |                           ^~~~~~~
+src/nuklear.h:16933:1: error: conflicting types for ‘nk_font_find_glyph’; have ‘const struct nk_font_glyph *(struct nk_font *, nk_rune)’ {aka ‘const struct nk_font_glyph *(struct nk_font *, unsigned int)’}
+16933 | nk_font_find_glyph(struct nk_font *font, nk_rune unicode)
+      | ^~~~~~~~~~~~~~~~~~
+src/nuklear.h:16895:13: note: previous implicit declaration of ‘nk_font_find_glyph’ with type ‘int()’
+16895 |         g = nk_font_find_glyph(font, unicode);
+      |             ^~~~~~~~~~~~~~~~~~
+In file included from src/nuklear.h:11823,
+                 from src/sdlutil.c:15:
+src/nuklear.h: In function ‘nk_font_find_glyph’:
+src/nuklear.h:16942:19: error: invalid use of undefined type ‘struct nk_font’
+16942 |     NK_ASSERT(font->glyphs);
+      |                   ^~
+src/nuklear.h:16942:5: note: in expansion of macro ‘NK_ASSERT’
+16942 |     NK_ASSERT(font->glyphs);
+      |     ^~~~~~~~~
+src/nuklear.h:16943:19: error: invalid use of undefined type ‘struct nk_font’
+16943 |     NK_ASSERT(font->info.ranges);
+      |                   ^~
+src/nuklear.h:16943:5: note: in expansion of macro ‘NK_ASSERT’
+16943 |     NK_ASSERT(font->info.ranges);
+      |     ^~~~~~~~~
+In file included from src/sdlutil.c:15:
+src/nuklear.h:16944:23: error: invalid use of undefined type ‘struct nk_font’
+16944 |     if (!font || !font->glyphs) return 0;
+      |                       ^~
+src/nuklear.h:16946:17: error: invalid use of undefined type ‘struct nk_font’
+16946 |     glyph = font->fallback;
+      |                 ^~
+src/nuklear.h:16947:16: error: invalid use of undefined type ‘struct nk_font’
+16947 |     iter = font->config;
+      |                ^~
+src/nuklear.h:16948:36: error: invalid use of undefined type ‘const struct nk_font_config’
+16948 |     do {count = nk_range_count(iter->range);
+      |                                    ^~
+src/nuklear.h:16950:29: error: invalid use of undefined type ‘const struct nk_font_config’
+16950 |             nk_rune f = iter->range[(i*2)+0];
+      |                             ^~
+src/nuklear.h:16951:29: error: invalid use of undefined type ‘const struct nk_font_config’
+16951 |             nk_rune t = iter->range[(i*2)+1];
+      |                             ^~
+src/nuklear.h:16954:29: error: invalid use of undefined type ‘struct nk_font’
+16954 |                 return &font->glyphs[((nk_rune)total_glyphs + (unicode - f))];
+      |                             ^~
+src/nuklear.h:16957:26: error: invalid use of undefined type ‘const struct nk_font_config’
+16957 |     } while ((iter = iter->n) != font->config);
+      |                          ^~
+src/nuklear.h:16957:38: error: invalid use of undefined type ‘struct nk_font’
+16957 |     } while ((iter = iter->n) != font->config);
+      |                                      ^~
+src/nuklear.h: At top level:
+src/nuklear.h:16963:18: warning: ‘struct nk_baked_font’ declared inside parameter list will not be visible outside of this definition or declaration
+16963 |     const struct nk_baked_font *baked_font, nk_handle atlas)
+      |                  ^~~~~~~~~~~~~
+src/nuklear.h:16961:21: warning: ‘struct nk_font’ declared inside parameter list will not be visible outside of this definition or declaration
+16961 | nk_font_init(struct nk_font *font, float pixel_height,
+      |                     ^~~~~~~
+src/nuklear.h: In function ‘nk_font_init’:
+src/nuklear.h:16965:26: error: storage size of ‘baked’ isn’t known
+16965 |     struct nk_baked_font baked;
+      |                          ^~~~~
+src/nuklear.h:16972:13: error: invalid use of undefined type ‘const struct nk_baked_font’
+16972 |     baked = *baked_font;
+      |             ^
+src/nuklear.h:16973:9: error: invalid use of undefined type ‘struct nk_font’
+16973 |     font->fallback = 0;
+      |         ^~
+src/nuklear.h:16974:9: error: invalid use of undefined type ‘struct nk_font’
+16974 |     font->info = baked;
+      |         ^~
+src/nuklear.h:16975:9: error: invalid use of undefined type ‘struct nk_font’
+16975 |     font->scale = (float)pixel_height / (float)font->info.height;
+      |         ^~
+src/nuklear.h:16975:52: error: invalid use of undefined type ‘struct nk_font’
+16975 |     font->scale = (float)pixel_height / (float)font->info.height;
+      |                                                    ^~
+src/nuklear.h:16976:9: error: invalid use of undefined type ‘struct nk_font’
+16976 |     font->glyphs = &glyphs[baked_font->glyph_offset];
+      |         ^~
+src/nuklear.h:16976:38: error: invalid use of undefined type ‘const struct nk_baked_font’
+16976 |     font->glyphs = &glyphs[baked_font->glyph_offset];
+      |                                      ^~
+src/nuklear.h:16977:9: error: invalid use of undefined type ‘struct nk_font’
+16977 |     font->texture = atlas;
+      |         ^~
+src/nuklear.h:16978:9: error: invalid use of undefined type ‘struct nk_font’
+16978 |     font->fallback_codepoint = fallback_codepoint;
+      |         ^~
+src/nuklear.h:16979:9: error: invalid use of undefined type ‘struct nk_font’
+16979 |     font->fallback = nk_font_find_glyph(font, fallback_codepoint);
+      |         ^~
+src/nuklear.h:16979:41: warning: passing argument 1 of ‘nk_font_find_glyph’ from incompatible pointer type [-Wincompatible-pointer-types]
+16979 |     font->fallback = nk_font_find_glyph(font, fallback_codepoint);
+      |                                         ^~~~
+      |                                         |
+      |                                         struct nk_font *
+src/nuklear.h:16933:36: note: expected ‘struct nk_font *’ but argument is of type ‘struct nk_font *’
+16933 | nk_font_find_glyph(struct nk_font *font, nk_rune unicode)
+      |                    ~~~~~~~~~~~~~~~~^~~~
+src/nuklear.h:16981:9: error: invalid use of undefined type ‘struct nk_font’
+16981 |     font->handle.height = font->info.height * font->scale;
+      |         ^~
+src/nuklear.h:16981:31: error: invalid use of undefined type ‘struct nk_font’
+16981 |     font->handle.height = font->info.height * font->scale;
+      |                               ^~
+src/nuklear.h:16981:51: error: invalid use of undefined type ‘struct nk_font’
+16981 |     font->handle.height = font->info.height * font->scale;
+      |                                                   ^~
+src/nuklear.h:16982:9: error: invalid use of undefined type ‘struct nk_font’
+16982 |     font->handle.width = nk_font_text_width;
+      |         ^~
+src/nuklear.h:16983:9: error: invalid use of undefined type ‘struct nk_font’
+16983 |     font->handle.userdata.ptr = font;
+      |         ^~
+src/nuklear.h:16985:9: error: invalid use of undefined type ‘struct nk_font’
+16985 |     font->handle.query = nk_font_query_font_glyph;
+      |         ^~
+src/nuklear.h:16986:9: error: invalid use of undefined type ‘struct nk_font’
+16986 |     font->handle.texture = font->texture;
+      |         ^~
+src/nuklear.h:16986:32: error: invalid use of undefined type ‘struct nk_font’
+16986 |     font->handle.texture = font->texture;
+      |                                ^~
+src/nuklear.h:16965:26: warning: unused variable ‘baked’ [-Wunused-variable]
+16965 |     struct nk_baked_font baked;
+      |                          ^~~~~
+src/nuklear.h: At top level:
+src/nuklear.h:17286:1: error: return type is an incomplete type
+17286 | nk_font_config(float pixel_height)
+      | ^~~~~~~~~~~~~~
+src/nuklear.h: In function ‘nk_font_config’:
+src/nuklear.h:17288:27: error: storage size of ‘cfg’ isn’t known
+17288 |     struct nk_font_config cfg;
+      |                           ^~~
+src/nuklear.h:17297:22: error: ‘NK_COORD_UV’ undeclared (first use in this function)
+17297 |     cfg.coord_type = NK_COORD_UV;
+      |                      ^~~~~~~~~~~
+src/nuklear.h:17304:12: warning: ‘return’ with a value, in function returning void [-Wreturn-type]
+17304 |     return cfg;
+      |            ^~~
+src/nuklear.h:17286:1: note: declared here
+17286 | nk_font_config(float pixel_height)
+      | ^~~~~~~~~~~~~~
+src/nuklear.h:17288:27: warning: unused variable ‘cfg’ [-Wunused-variable]
+17288 |     struct nk_font_config cfg;
+      |                           ^~~
+src/nuklear.h: At top level:
+src/nuklear.h:17308:35: warning: ‘struct nk_font_atlas’ declared inside parameter list will not be visible outside of this definition or declaration
+17308 | nk_font_atlas_init_default(struct nk_font_atlas *atlas)
+      |                                   ^~~~~~~~~~~~~
+In file included from src/sdlutil.h:8,
+                 from src/sdlutil.c:3:
+src/nuklear.h: In function ‘nk_font_atlas_init_default’:
+src/nuklear.h:5694:45: error: invalid application of ‘sizeof’ to incomplete type ‘struct nk_font_atlas’
+ 5694 | #define nk_zero_struct(s) nk_zero(&s, sizeof(s))
+      |                                             ^
+src/nuklear.h:17312:5: note: in expansion of macro ‘nk_zero_struct’
+17312 |     nk_zero_struct(*atlas);
+      |     ^~~~~~~~~~~~~~
+In file included from src/sdlutil.c:15:
+src/nuklear.h:17313:10: error: invalid use of undefined type ‘struct nk_font_atlas’
+17313 |     atlas->temporary.userdata.ptr = 0;
+      |          ^~
+src/nuklear.h:17314:10: error: invalid use of undefined type ‘struct nk_font_atlas’
+17314 |     atlas->temporary.alloc = nk_malloc;
+      |          ^~
+src/nuklear.h:17315:10: error: invalid use of undefined type ‘struct nk_font_atlas’
+17315 |     atlas->temporary.free = nk_mfree;
+      |          ^~
+src/nuklear.h:17316:10: error: invalid use of undefined type ‘struct nk_font_atlas’
+17316 |     atlas->permanent.userdata.ptr = 0;
+      |          ^~
+src/nuklear.h:17317:10: error: invalid use of undefined type ‘struct nk_font_atlas’
+17317 |     atlas->permanent.alloc = nk_malloc;
+      |          ^~
+src/nuklear.h:17318:10: error: invalid use of undefined type ‘struct nk_font_atlas’
+17318 |     atlas->permanent.free = nk_mfree;
+      |          ^~
+src/nuklear.h: At top level:
+src/nuklear.h:17322:27: warning: ‘struct nk_font_atlas’ declared inside parameter list will not be visible outside of this definition or declaration
+17322 | nk_font_atlas_init(struct nk_font_atlas *atlas, struct nk_allocator *alloc)
+      |                           ^~~~~~~~~~~~~
+In file included from src/sdlutil.h:8,
+                 from src/sdlutil.c:3:
+src/nuklear.h: In function ‘nk_font_atlas_init’:
+src/nuklear.h:5694:45: error: invalid application of ‘sizeof’ to incomplete type ‘struct nk_font_atlas’
+ 5694 | #define nk_zero_struct(s) nk_zero(&s, sizeof(s))
+      |                                             ^
+src/nuklear.h:17327:5: note: in expansion of macro ‘nk_zero_struct’
+17327 |     nk_zero_struct(*atlas);
+      |     ^~~~~~~~~~~~~~
+In file included from src/sdlutil.c:15:
+src/nuklear.h:17328:10: error: invalid use of undefined type ‘struct nk_font_atlas’
+17328 |     atlas->permanent = *alloc;
+      |          ^~
+src/nuklear.h:17329:10: error: invalid use of undefined type ‘struct nk_font_atlas’
+17329 |     atlas->temporary = *alloc;
+      |          ^~
+src/nuklear.h: At top level:
+src/nuklear.h:17332:34: warning: ‘struct nk_font_atlas’ declared inside parameter list will not be visible outside of this definition or declaration
+17332 | nk_font_atlas_init_custom(struct nk_font_atlas *atlas,
+      |                                  ^~~~~~~~~~~~~
+In file included from src/sdlutil.h:8,
+                 from src/sdlutil.c:3:
+src/nuklear.h: In function ‘nk_font_atlas_init_custom’:
+src/nuklear.h:5694:45: error: invalid application of ‘sizeof’ to incomplete type ‘struct nk_font_atlas’
+ 5694 | #define nk_zero_struct(s) nk_zero(&s, sizeof(s))
+      |                                             ^
+src/nuklear.h:17339:5: note: in expansion of macro ‘nk_zero_struct’
+17339 |     nk_zero_struct(*atlas);
+      |     ^~~~~~~~~~~~~~
+In file included from src/sdlutil.c:15:
+src/nuklear.h:17340:10: error: invalid use of undefined type ‘struct nk_font_atlas’
+17340 |     atlas->permanent = *permanent;
+      |          ^~
+src/nuklear.h:17341:10: error: invalid use of undefined type ‘struct nk_font_atlas’
+17341 |     atlas->temporary = *temporary;
+      |          ^~
+src/nuklear.h: At top level:
+src/nuklear.h:17344:28: warning: ‘struct nk_font_atlas’ declared inside parameter list will not be visible outside of this definition or declaration
+17344 | nk_font_atlas_begin(struct nk_font_atlas *atlas)
+      |                            ^~~~~~~~~~~~~
+In file included from src/nuklear.h:11823,
+                 from src/sdlutil.c:15:
+src/nuklear.h: In function ‘nk_font_atlas_begin’:
+src/nuklear.h:17347:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17347 |     NK_ASSERT(atlas->temporary.alloc && atlas->temporary.free);
+      |                    ^~
+src/nuklear.h:17347:5: note: in expansion of macro ‘NK_ASSERT’
+17347 |     NK_ASSERT(atlas->temporary.alloc && atlas->temporary.free);
+      |     ^~~~~~~~~
+src/nuklear.h:17347:46: error: invalid use of undefined type ‘struct nk_font_atlas’
+17347 |     NK_ASSERT(atlas->temporary.alloc && atlas->temporary.free);
+      |                                              ^~
+src/nuklear.h:17347:5: note: in expansion of macro ‘NK_ASSERT’
+17347 |     NK_ASSERT(atlas->temporary.alloc && atlas->temporary.free);
+      |     ^~~~~~~~~
+src/nuklear.h:17348:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17348 |     NK_ASSERT(atlas->permanent.alloc && atlas->permanent.free);
+      |                    ^~
+src/nuklear.h:17348:5: note: in expansion of macro ‘NK_ASSERT’
+17348 |     NK_ASSERT(atlas->permanent.alloc && atlas->permanent.free);
+      |     ^~~~~~~~~
+src/nuklear.h:17348:46: error: invalid use of undefined type ‘struct nk_font_atlas’
+17348 |     NK_ASSERT(atlas->permanent.alloc && atlas->permanent.free);
+      |                                              ^~
+src/nuklear.h:17348:5: note: in expansion of macro ‘NK_ASSERT’
+17348 |     NK_ASSERT(atlas->permanent.alloc && atlas->permanent.free);
+      |     ^~~~~~~~~
+In file included from src/sdlutil.c:15:
+src/nuklear.h:17349:25: error: invalid use of undefined type ‘struct nk_font_atlas’
+17349 |     if (!atlas || !atlas->permanent.alloc || !atlas->permanent.free ||
+      |                         ^~
+src/nuklear.h:17349:52: error: invalid use of undefined type ‘struct nk_font_atlas’
+17349 |     if (!atlas || !atlas->permanent.alloc || !atlas->permanent.free ||
+      |                                                    ^~
+src/nuklear.h:17350:15: error: invalid use of undefined type ‘struct nk_font_atlas’
+17350 |         !atlas->temporary.alloc || !atlas->temporary.free) return;
+      |               ^~
+src/nuklear.h:17350:42: error: invalid use of undefined type ‘struct nk_font_atlas’
+17350 |         !atlas->temporary.alloc || !atlas->temporary.free) return;
+      |                                          ^~
+src/nuklear.h:17351:14: error: invalid use of undefined type ‘struct nk_font_atlas’
+17351 |     if (atlas->glyphs) {
+      |              ^~
+src/nuklear.h:17352:14: error: invalid use of undefined type ‘struct nk_font_atlas’
+17352 |         atlas->permanent.free(atlas->permanent.userdata, atlas->glyphs);
+      |              ^~
+src/nuklear.h:17352:36: error: invalid use of undefined type ‘struct nk_font_atlas’
+17352 |         atlas->permanent.free(atlas->permanent.userdata, atlas->glyphs);
+      |                                    ^~
+src/nuklear.h:17352:63: error: invalid use of undefined type ‘struct nk_font_atlas’
+17352 |         atlas->permanent.free(atlas->permanent.userdata, atlas->glyphs);
+      |                                                               ^~
+src/nuklear.h:17353:14: error: invalid use of undefined type ‘struct nk_font_atlas’
+17353 |         atlas->glyphs = 0;
+      |              ^~
+src/nuklear.h:17355:14: error: invalid use of undefined type ‘struct nk_font_atlas’
+17355 |     if (atlas->pixel) {
+      |              ^~
+src/nuklear.h:17356:14: error: invalid use of undefined type ‘struct nk_font_atlas’
+17356 |         atlas->permanent.free(atlas->permanent.userdata, atlas->pixel);
+      |              ^~
+src/nuklear.h:17356:36: error: invalid use of undefined type ‘struct nk_font_atlas’
+17356 |         atlas->permanent.free(atlas->permanent.userdata, atlas->pixel);
+      |                                    ^~
+src/nuklear.h:17356:63: error: invalid use of undefined type ‘struct nk_font_atlas’
+17356 |         atlas->permanent.free(atlas->permanent.userdata, atlas->pixel);
+      |                                                               ^~
+src/nuklear.h:17357:14: error: invalid use of undefined type ‘struct nk_font_atlas’
+17357 |         atlas->pixel = 0;
+      |              ^~
+src/nuklear.h: At top level:
+src/nuklear.h:17361:26: warning: ‘struct nk_font_atlas’ declared inside parameter list will not be visible outside of this definition or declaration
+17361 | nk_font_atlas_add(struct nk_font_atlas *atlas, const struct nk_font_config *config)
+      |                          ^~~~~~~~~~~~~
+In file included from src/nuklear.h:11823,
+                 from src/sdlutil.c:15:
+src/nuklear.h: In function ‘nk_font_atlas_add’:
+src/nuklear.h:17367:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17367 |     NK_ASSERT(atlas->permanent.alloc);
+      |                    ^~
+src/nuklear.h:17367:5: note: in expansion of macro ‘NK_ASSERT’
+17367 |     NK_ASSERT(atlas->permanent.alloc);
+      |     ^~~~~~~~~
+src/nuklear.h:17368:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17368 |     NK_ASSERT(atlas->permanent.free);
+      |                    ^~
+src/nuklear.h:17368:5: note: in expansion of macro ‘NK_ASSERT’
+17368 |     NK_ASSERT(atlas->permanent.free);
+      |     ^~~~~~~~~
+src/nuklear.h:17369:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17369 |     NK_ASSERT(atlas->temporary.alloc);
+      |                    ^~
+src/nuklear.h:17369:5: note: in expansion of macro ‘NK_ASSERT’
+17369 |     NK_ASSERT(atlas->temporary.alloc);
+      |     ^~~~~~~~~
+src/nuklear.h:17370:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17370 |     NK_ASSERT(atlas->temporary.free);
+      |                    ^~
+src/nuklear.h:17370:5: note: in expansion of macro ‘NK_ASSERT’
+17370 |     NK_ASSERT(atlas->temporary.free);
+      |     ^~~~~~~~~
+src/nuklear.h:17373:21: error: invalid use of undefined type ‘const struct nk_font_config’
+17373 |     NK_ASSERT(config->ttf_blob);
+      |                     ^~
+src/nuklear.h:17373:5: note: in expansion of macro ‘NK_ASSERT’
+17373 |     NK_ASSERT(config->ttf_blob);
+      |     ^~~~~~~~~
+src/nuklear.h:17374:21: error: invalid use of undefined type ‘const struct nk_font_config’
+17374 |     NK_ASSERT(config->ttf_size);
+      |                     ^~
+src/nuklear.h:17374:5: note: in expansion of macro ‘NK_ASSERT’
+17374 |     NK_ASSERT(config->ttf_size);
+      |     ^~~~~~~~~
+src/nuklear.h:17375:21: error: invalid use of undefined type ‘const struct nk_font_config’
+17375 |     NK_ASSERT(config->size > 0.0f);
+      |                     ^~
+src/nuklear.h:17375:5: note: in expansion of macro ‘NK_ASSERT’
+17375 |     NK_ASSERT(config->size > 0.0f);
+      |     ^~~~~~~~~
+In file included from src/sdlutil.c:15:
+src/nuklear.h:17377:37: error: invalid use of undefined type ‘const struct nk_font_config’
+17377 |     if (!atlas || !config || !config->ttf_blob || !config->ttf_size || config->size <= 0.0f||
+      |                                     ^~
+src/nuklear.h:17377:58: error: invalid use of undefined type ‘const struct nk_font_config’
+17377 |     if (!atlas || !config || !config->ttf_blob || !config->ttf_size || config->size <= 0.0f||
+      |                                                          ^~
+src/nuklear.h:17377:78: error: invalid use of undefined type ‘const struct nk_font_config’
+17377 |     if (!atlas || !config || !config->ttf_blob || !config->ttf_size || config->size <= 0.0f||
+      |                                                                              ^~
+src/nuklear.h:17378:15: error: invalid use of undefined type ‘struct nk_font_atlas’
+17378 |         !atlas->permanent.alloc || !atlas->permanent.free ||
+      |               ^~
+src/nuklear.h:17378:42: error: invalid use of undefined type ‘struct nk_font_atlas’
+17378 |         !atlas->permanent.alloc || !atlas->permanent.free ||
+      |                                          ^~
+src/nuklear.h:17379:15: error: invalid use of undefined type ‘struct nk_font_atlas’
+17379 |         !atlas->temporary.alloc || !atlas->temporary.free)
+      |               ^~
+src/nuklear.h:17379:42: error: invalid use of undefined type ‘struct nk_font_atlas’
+17379 |         !atlas->temporary.alloc || !atlas->temporary.free)
+      |                                          ^~
+src/nuklear.h:17384:14: error: invalid use of undefined type ‘struct nk_font_atlas’
+17384 |         atlas->permanent.alloc(atlas->permanent.userdata,0, sizeof(struct nk_font_config));
+      |              ^~
+src/nuklear.h:17384:37: error: invalid use of undefined type ‘struct nk_font_atlas’
+17384 |         atlas->permanent.alloc(atlas->permanent.userdata,0, sizeof(struct nk_font_config));
+      |                                     ^~
+src/nuklear.h:17384:68: error: invalid application of ‘sizeof’ to incomplete type ‘struct nk_font_config’
+17384 |         atlas->permanent.alloc(atlas->permanent.userdata,0, sizeof(struct nk_font_config));
+      |                                                                    ^~~~~~
+src/nuklear.h:17385:34: error: invalid application of ‘sizeof’ to incomplete type ‘const struct nk_font_config’
+17385 |     NK_MEMCPY(cfg, config, sizeof(*config));
+      |                                  ^
+src/nuklear.h:17386:8: error: invalid use of undefined type ‘struct nk_font_config’
+17386 |     cfg->n = cfg;
+      |        ^~
+src/nuklear.h:17387:8: error: invalid use of undefined type ‘struct nk_font_config’
+17387 |     cfg->p = cfg;
+      |        ^~
+src/nuklear.h:17389:16: error: invalid use of undefined type ‘const struct nk_font_config’
+17389 |     if (!config->merge_mode) {
+      |                ^~
+src/nuklear.h:17391:19: error: invalid use of undefined type ‘struct nk_font_atlas’
+17391 |         if (!atlas->config) {
+      |                   ^~
+src/nuklear.h:17392:18: error: invalid use of undefined type ‘struct nk_font_atlas’
+17392 |             atlas->config = cfg;
+      |                  ^~
+src/nuklear.h:17393:16: error: invalid use of undefined type ‘struct nk_font_config’
+17393 |             cfg->next = 0;
+      |                ^~
+src/nuklear.h:17395:45: error: invalid use of undefined type ‘struct nk_font_atlas’
+17395 |             struct nk_font_config *i = atlas->config;
+      |                                             ^~
+src/nuklear.h:17396:21: error: invalid use of undefined type ‘struct nk_font_config’
+17396 |             while (i->next) i = i->next;
+      |                     ^~
+src/nuklear.h:17396:34: error: invalid use of undefined type ‘struct nk_font_config’
+17396 |             while (i->next) i = i->next;
+      |                                  ^~
+src/nuklear.h:17397:14: error: invalid use of undefined type ‘struct nk_font_config’
+17397 |             i->next = cfg;
+      |              ^~
+src/nuklear.h:17398:16: error: invalid use of undefined type ‘struct nk_font_config’
+17398 |             cfg->next = 0;
+      |                ^~
+src/nuklear.h:17402:18: error: invalid use of undefined type ‘struct nk_font_atlas’
+17402 |             atlas->permanent.alloc(atlas->permanent.userdata,0, sizeof(struct nk_font));
+      |                  ^~
+src/nuklear.h:17402:41: error: invalid use of undefined type ‘struct nk_font_atlas’
+17402 |             atlas->permanent.alloc(atlas->permanent.userdata,0, sizeof(struct nk_font));
+      |                                         ^~
+src/nuklear.h:17402:72: error: invalid application of ‘sizeof’ to incomplete type ‘struct nk_font’
+17402 |             atlas->permanent.alloc(atlas->permanent.userdata,0, sizeof(struct nk_font));
+      |                                                                        ^~~~~~
+src/nuklear.h:17404:29: error: invalid application of ‘sizeof’ to incomplete type ‘struct nk_font’
+17404 |         nk_zero(font, sizeof(*font));
+      |                             ^
+src/nuklear.h:17406:13: error: invalid use of undefined type ‘struct nk_font’
+17406 |         font->config = cfg;
+      |             ^~
+src/nuklear.h:17409:19: error: invalid use of undefined type ‘struct nk_font_atlas’
+17409 |         if (!atlas->fonts) {
+      |                   ^~
+src/nuklear.h:17410:18: error: invalid use of undefined type ‘struct nk_font_atlas’
+17410 |             atlas->fonts = font;
+      |                  ^~
+src/nuklear.h:17411:17: error: invalid use of undefined type ‘struct nk_font’
+17411 |             font->next = 0;
+      |                 ^~
+src/nuklear.h:17413:38: error: invalid use of undefined type ‘struct nk_font_atlas’
+17413 |             struct nk_font *i = atlas->fonts;
+      |                                      ^~
+src/nuklear.h:17414:21: error: invalid use of undefined type ‘struct nk_font’
+17414 |             while (i->next) i = i->next;
+      |                     ^~
+src/nuklear.h:17414:34: error: invalid use of undefined type ‘struct nk_font’
+17414 |             while (i->next) i = i->next;
+      |                                  ^~
+src/nuklear.h:17415:14: error: invalid use of undefined type ‘struct nk_font’
+17415 |             i->next = font;
+      |              ^~
+src/nuklear.h:17416:17: error: invalid use of undefined type ‘struct nk_font’
+17416 |             font->next = 0;
+      |                 ^~
+src/nuklear.h:17418:12: error: invalid use of undefined type ‘struct nk_font_config’
+17418 |         cfg->font = &font->info;
+      |            ^~
+src/nuklear.h:17418:26: error: invalid use of undefined type ‘struct nk_font’
+17418 |         cfg->font = &font->info;
+      |                          ^~
+In file included from src/nuklear.h:11823,
+                 from src/sdlutil.c:15:
+src/nuklear.h:17423:24: error: invalid use of undefined type ‘struct nk_font_atlas’
+17423 |         NK_ASSERT(atlas->font_num);
+      |                        ^~
+src/nuklear.h:17423:9: note: in expansion of macro ‘NK_ASSERT’
+17423 |         NK_ASSERT(atlas->font_num);
+      |         ^~~~~~~~~
+In file included from src/sdlutil.c:15:
+src/nuklear.h:17424:18: error: invalid use of undefined type ‘struct nk_font_atlas’
+17424 |         f = atlas->fonts;
+      |                  ^~
+src/nuklear.h:17425:14: error: invalid use of undefined type ‘struct nk_font’
+17425 |         c = f->config;
+      |              ^~
+src/nuklear.h:17426:12: error: invalid use of undefined type ‘struct nk_font_config’
+17426 |         cfg->font = &f->info;
+      |            ^~
+src/nuklear.h:17426:23: error: invalid use of undefined type ‘struct nk_font’
+17426 |         cfg->font = &f->info;
+      |                       ^~
+src/nuklear.h:17428:12: error: invalid use of undefined type ‘struct nk_font_config’
+17428 |         cfg->n = c;
+      |            ^~
+src/nuklear.h:17429:12: error: invalid use of undefined type ‘struct nk_font_config’
+17429 |         cfg->p = c->p;
+      |            ^~
+src/nuklear.h:17429:19: error: invalid use of undefined type ‘struct nk_font_config’
+17429 |         cfg->p = c->p;
+      |                   ^~
+src/nuklear.h:17430:10: error: invalid use of undefined type ‘struct nk_font_config’
+17430 |         c->p->n = cfg;
+      |          ^~
+src/nuklear.h:17431:10: error: invalid use of undefined type ‘struct nk_font_config’
+17431 |         c->p = cfg;
+      |          ^~
+src/nuklear.h:17434:16: error: invalid use of undefined type ‘const struct nk_font_config’
+17434 |     if (!config->ttf_data_owned_by_atlas) {
+      |                ^~
+src/nuklear.h:17435:12: error: invalid use of undefined type ‘struct nk_font_config’
+17435 |         cfg->ttf_blob = atlas->permanent.alloc(atlas->permanent.userdata,0, cfg->ttf_size);
+      |            ^~
+src/nuklear.h:17435:30: error: invalid use of undefined type ‘struct nk_font_atlas’
+17435 |         cfg->ttf_blob = atlas->permanent.alloc(atlas->permanent.userdata,0, cfg->ttf_size);
+      |                              ^~
+src/nuklear.h:17435:53: error: invalid use of undefined type ‘struct nk_font_atlas’
+17435 |         cfg->ttf_blob = atlas->permanent.alloc(atlas->permanent.userdata,0, cfg->ttf_size);
+      |                                                     ^~
+src/nuklear.h:17435:80: error: invalid use of undefined type ‘struct nk_font_config’
+17435 |         cfg->ttf_blob = atlas->permanent.alloc(atlas->permanent.userdata,0, cfg->ttf_size);
+      |                                                                                ^~
+In file included from src/nuklear.h:11823,
+                 from src/sdlutil.c:15:
+src/nuklear.h:17436:22: error: invalid use of undefined type ‘struct nk_font_config’
+17436 |         NK_ASSERT(cfg->ttf_blob);
+      |                      ^~
+src/nuklear.h:17436:9: note: in expansion of macro ‘NK_ASSERT’
+17436 |         NK_ASSERT(cfg->ttf_blob);
+      |         ^~~~~~~~~
+In file included from src/sdlutil.c:15:
+src/nuklear.h:17437:17: error: invalid use of undefined type ‘struct nk_font_config’
+17437 |         if (!cfg->ttf_blob) {
+      |                 ^~
+src/nuklear.h:17438:18: error: invalid use of undefined type ‘struct nk_font_atlas’
+17438 |             atlas->font_num++;
+      |                  ^~
+src/nuklear.h:17441:22: error: invalid use of undefined type ‘struct nk_font_config’
+17441 |         NK_MEMCPY(cfg->ttf_blob, config->ttf_blob, cfg->ttf_size);
+      |                      ^~
+src/nuklear.h:17441:40: error: invalid use of undefined type ‘const struct nk_font_config’
+17441 |         NK_MEMCPY(cfg->ttf_blob, config->ttf_blob, cfg->ttf_size);
+      |                                        ^~
+src/nuklear.h:17441:55: error: invalid use of undefined type ‘struct nk_font_config’
+17441 |         NK_MEMCPY(cfg->ttf_blob, config->ttf_blob, cfg->ttf_size);
+      |                                                       ^~
+src/nuklear.h:17442:12: error: invalid use of undefined type ‘struct nk_font_config’
+17442 |         cfg->ttf_data_owned_by_atlas = 1;
+      |            ^~
+src/nuklear.h:17444:10: error: invalid use of undefined type ‘struct nk_font_atlas’
+17444 |     atlas->font_num++;
+      |          ^~
+src/nuklear.h: At top level:
+src/nuklear.h:17448:38: warning: ‘struct nk_font_atlas’ declared inside parameter list will not be visible outside of this definition or declaration
+17448 | nk_font_atlas_add_from_memory(struct nk_font_atlas *atlas, void *memory,
+      |                                      ^~~~~~~~~~~~~
+src/nuklear.h: In function ‘nk_font_atlas_add_from_memory’:
+src/nuklear.h:17451:27: error: storage size of ‘cfg’ isn’t known
+17451 |     struct nk_font_config cfg;
+      |                           ^~~
+In file included from src/nuklear.h:11823,
+                 from src/sdlutil.c:15:
+src/nuklear.h:17456:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17456 |     NK_ASSERT(atlas->temporary.alloc);
+      |                    ^~
+src/nuklear.h:17456:5: note: in expansion of macro ‘NK_ASSERT’
+17456 |     NK_ASSERT(atlas->temporary.alloc);
+      |     ^~~~~~~~~
+src/nuklear.h:17457:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17457 |     NK_ASSERT(atlas->temporary.free);
+      |                    ^~
+src/nuklear.h:17457:5: note: in expansion of macro ‘NK_ASSERT’
+17457 |     NK_ASSERT(atlas->temporary.free);
+      |     ^~~~~~~~~
+src/nuklear.h:17458:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17458 |     NK_ASSERT(atlas->permanent.alloc);
+      |                    ^~
+src/nuklear.h:17458:5: note: in expansion of macro ‘NK_ASSERT’
+17458 |     NK_ASSERT(atlas->permanent.alloc);
+      |     ^~~~~~~~~
+src/nuklear.h:17459:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17459 |     NK_ASSERT(atlas->permanent.free);
+      |                    ^~
+src/nuklear.h:17459:5: note: in expansion of macro ‘NK_ASSERT’
+17459 |     NK_ASSERT(atlas->permanent.free);
+      |     ^~~~~~~~~
+In file included from src/sdlutil.c:15:
+src/nuklear.h:17460:25: error: invalid use of undefined type ‘struct nk_font_atlas’
+17460 |     if (!atlas || !atlas->temporary.alloc || !atlas->temporary.free || !memory || !size ||
+      |                         ^~
+src/nuklear.h:17460:52: error: invalid use of undefined type ‘struct nk_font_atlas’
+17460 |     if (!atlas || !atlas->temporary.alloc || !atlas->temporary.free || !memory || !size ||
+      |                                                    ^~
+src/nuklear.h:17461:15: error: invalid use of undefined type ‘struct nk_font_atlas’
+17461 |         !atlas->permanent.alloc || !atlas->permanent.free)
+      |               ^~
+src/nuklear.h:17461:42: error: invalid use of undefined type ‘struct nk_font_atlas’
+17461 |         !atlas->permanent.alloc || !atlas->permanent.free)
+      |                                          ^~
+src/nuklear.h:17464:22: error: invalid use of undefined type ‘const struct nk_font_config’
+17464 |     cfg = (config) ? *config: nk_font_config(height);
+      |                      ^
+src/nuklear.h:17469:30: warning: passing argument 1 of ‘nk_font_atlas_add’ from incompatible pointer type [-Wincompatible-pointer-types]
+17469 |     return nk_font_atlas_add(atlas, &cfg);
+      |                              ^~~~~
+      |                              |
+      |                              struct nk_font_atlas *
+src/nuklear.h:17361:41: note: expected ‘struct nk_font_atlas *’ but argument is of type ‘struct nk_font_atlas *’
+17361 | nk_font_atlas_add(struct nk_font_atlas *atlas, const struct nk_font_config *config)
+      |                   ~~~~~~~~~~~~~~~~~~~~~~^~~~~
+src/nuklear.h:17451:27: warning: unused variable ‘cfg’ [-Wunused-variable]
+17451 |     struct nk_font_config cfg;
+      |                           ^~~
+src/nuklear.h: At top level:
+src/nuklear.h:17473:36: warning: ‘struct nk_font_atlas’ declared inside parameter list will not be visible outside of this definition or declaration
+17473 | nk_font_atlas_add_from_file(struct nk_font_atlas *atlas, const char *file_path,
+      |                                    ^~~~~~~~~~~~~
+src/nuklear.h: In function ‘nk_font_atlas_add_from_file’:
+src/nuklear.h:17478:27: error: storage size of ‘cfg’ isn’t known
+17478 |     struct nk_font_config cfg;
+      |                           ^~~
+In file included from src/nuklear.h:11823,
+                 from src/sdlutil.c:15:
+src/nuklear.h:17481:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17481 |     NK_ASSERT(atlas->temporary.alloc);
+      |                    ^~
+src/nuklear.h:17481:5: note: in expansion of macro ‘NK_ASSERT’
+17481 |     NK_ASSERT(atlas->temporary.alloc);
+      |     ^~~~~~~~~
+src/nuklear.h:17482:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17482 |     NK_ASSERT(atlas->temporary.free);
+      |                    ^~
+src/nuklear.h:17482:5: note: in expansion of macro ‘NK_ASSERT’
+17482 |     NK_ASSERT(atlas->temporary.free);
+      |     ^~~~~~~~~
+src/nuklear.h:17483:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17483 |     NK_ASSERT(atlas->permanent.alloc);
+      |                    ^~
+src/nuklear.h:17483:5: note: in expansion of macro ‘NK_ASSERT’
+17483 |     NK_ASSERT(atlas->permanent.alloc);
+      |     ^~~~~~~~~
+src/nuklear.h:17484:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17484 |     NK_ASSERT(atlas->permanent.free);
+      |                    ^~
+src/nuklear.h:17484:5: note: in expansion of macro ‘NK_ASSERT’
+17484 |     NK_ASSERT(atlas->permanent.free);
+      |     ^~~~~~~~~
+In file included from src/sdlutil.c:15:
+src/nuklear.h:17487:51: error: invalid use of undefined type ‘struct nk_font_atlas’
+17487 |     memory = nk_file_load(file_path, &size, &atlas->permanent);
+      |                                                   ^~
+src/nuklear.h:17490:22: error: invalid use of undefined type ‘const struct nk_font_config’
+17490 |     cfg = (config) ? *config: nk_font_config(height);
+      |                      ^
+src/nuklear.h:17495:30: warning: passing argument 1 of ‘nk_font_atlas_add’ from incompatible pointer type [-Wincompatible-pointer-types]
+17495 |     return nk_font_atlas_add(atlas, &cfg);
+      |                              ^~~~~
+      |                              |
+      |                              struct nk_font_atlas *
+src/nuklear.h:17361:41: note: expected ‘struct nk_font_atlas *’ but argument is of type ‘struct nk_font_atlas *’
+17361 | nk_font_atlas_add(struct nk_font_atlas *atlas, const struct nk_font_config *config)
+      |                   ~~~~~~~~~~~~~~~~~~~~~~^~~~~
+src/nuklear.h:17478:27: warning: unused variable ‘cfg’ [-Wunused-variable]
+17478 |     struct nk_font_config cfg;
+      |                           ^~~
+src/nuklear.h: At top level:
+src/nuklear.h:17499:37: warning: ‘struct nk_font_atlas’ declared inside parameter list will not be visible outside of this definition or declaration
+17499 | nk_font_atlas_add_compressed(struct nk_font_atlas *atlas,
+      |                                     ^~~~~~~~~~~~~
+src/nuklear.h: In function ‘nk_font_atlas_add_compressed’:
+src/nuklear.h:17505:27: error: storage size of ‘cfg’ isn’t known
+17505 |     struct nk_font_config cfg;
+      |                           ^~~
+In file included from src/nuklear.h:11823,
+                 from src/sdlutil.c:15:
+src/nuklear.h:17508:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17508 |     NK_ASSERT(atlas->temporary.alloc);
+      |                    ^~
+src/nuklear.h:17508:5: note: in expansion of macro ‘NK_ASSERT’
+17508 |     NK_ASSERT(atlas->temporary.alloc);
+      |     ^~~~~~~~~
+src/nuklear.h:17509:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17509 |     NK_ASSERT(atlas->temporary.free);
+      |                    ^~
+src/nuklear.h:17509:5: note: in expansion of macro ‘NK_ASSERT’
+17509 |     NK_ASSERT(atlas->temporary.free);
+      |     ^~~~~~~~~
+src/nuklear.h:17510:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17510 |     NK_ASSERT(atlas->permanent.alloc);
+      |                    ^~
+src/nuklear.h:17510:5: note: in expansion of macro ‘NK_ASSERT’
+17510 |     NK_ASSERT(atlas->permanent.alloc);
+      |     ^~~~~~~~~
+src/nuklear.h:17511:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17511 |     NK_ASSERT(atlas->permanent.free);
+      |                    ^~
+src/nuklear.h:17511:5: note: in expansion of macro ‘NK_ASSERT’
+17511 |     NK_ASSERT(atlas->permanent.free);
+      |     ^~~~~~~~~
+In file included from src/sdlutil.c:15:
+src/nuklear.h:17515:45: error: invalid use of undefined type ‘struct nk_font_atlas’
+17515 |     if (!atlas || !compressed_data || !atlas->temporary.alloc || !atlas->temporary.free ||
+      |                                             ^~
+src/nuklear.h:17515:72: error: invalid use of undefined type ‘struct nk_font_atlas’
+17515 |     if (!atlas || !compressed_data || !atlas->temporary.alloc || !atlas->temporary.free ||
+      |                                                                        ^~
+src/nuklear.h:17516:15: error: invalid use of undefined type ‘struct nk_font_atlas’
+17516 |         !atlas->permanent.alloc || !atlas->permanent.free)
+      |               ^~
+src/nuklear.h:17516:42: error: invalid use of undefined type ‘struct nk_font_atlas’
+17516 |         !atlas->permanent.alloc || !atlas->permanent.free)
+      |                                          ^~
+src/nuklear.h:17520:30: error: invalid use of undefined type ‘struct nk_font_atlas’
+17520 |     decompressed_data = atlas->permanent.alloc(atlas->permanent.userdata,0,decompressed_size);
+      |                              ^~
+src/nuklear.h:17520:53: error: invalid use of undefined type ‘struct nk_font_atlas’
+17520 |     decompressed_data = atlas->permanent.alloc(atlas->permanent.userdata,0,decompressed_size);
+      |                                                     ^~
+src/nuklear.h:17526:22: error: invalid use of undefined type ‘const struct nk_font_config’
+17526 |     cfg = (config) ? *config: nk_font_config(height);
+      |                      ^
+src/nuklear.h:17531:30: warning: passing argument 1 of ‘nk_font_atlas_add’ from incompatible pointer type [-Wincompatible-pointer-types]
+17531 |     return nk_font_atlas_add(atlas, &cfg);
+      |                              ^~~~~
+      |                              |
+      |                              struct nk_font_atlas *
+src/nuklear.h:17361:41: note: expected ‘struct nk_font_atlas *’ but argument is of type ‘struct nk_font_atlas *’
+17361 | nk_font_atlas_add(struct nk_font_atlas *atlas, const struct nk_font_config *config)
+      |                   ~~~~~~~~~~~~~~~~~~~~~~^~~~~
+src/nuklear.h:17505:27: warning: unused variable ‘cfg’ [-Wunused-variable]
+17505 |     struct nk_font_config cfg;
+      |                           ^~~
+src/nuklear.h: At top level:
+src/nuklear.h:17534:44: warning: ‘struct nk_font_atlas’ declared inside parameter list will not be visible outside of this definition or declaration
+17534 | nk_font_atlas_add_compressed_base85(struct nk_font_atlas *atlas,
+      |                                            ^~~~~~~~~~~~~
+In file included from src/nuklear.h:11823,
+                 from src/sdlutil.c:15:
+src/nuklear.h: In function ‘nk_font_atlas_add_compressed_base85’:
+src/nuklear.h:17542:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17542 |     NK_ASSERT(atlas->temporary.alloc);
+      |                    ^~
+src/nuklear.h:17542:5: note: in expansion of macro ‘NK_ASSERT’
+17542 |     NK_ASSERT(atlas->temporary.alloc);
+      |     ^~~~~~~~~
+src/nuklear.h:17543:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17543 |     NK_ASSERT(atlas->temporary.free);
+      |                    ^~
+src/nuklear.h:17543:5: note: in expansion of macro ‘NK_ASSERT’
+17543 |     NK_ASSERT(atlas->temporary.free);
+      |     ^~~~~~~~~
+src/nuklear.h:17544:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17544 |     NK_ASSERT(atlas->permanent.alloc);
+      |                    ^~
+src/nuklear.h:17544:5: note: in expansion of macro ‘NK_ASSERT’
+17544 |     NK_ASSERT(atlas->permanent.alloc);
+      |     ^~~~~~~~~
+src/nuklear.h:17545:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17545 |     NK_ASSERT(atlas->permanent.free);
+      |                    ^~
+src/nuklear.h:17545:5: note: in expansion of macro ‘NK_ASSERT’
+17545 |     NK_ASSERT(atlas->permanent.free);
+      |     ^~~~~~~~~
+In file included from src/sdlutil.c:15:
+src/nuklear.h:17548:41: error: invalid use of undefined type ‘struct nk_font_atlas’
+17548 |     if (!atlas || !data_base85 || !atlas->temporary.alloc || !atlas->temporary.free ||
+      |                                         ^~
+src/nuklear.h:17548:68: error: invalid use of undefined type ‘struct nk_font_atlas’
+17548 |     if (!atlas || !data_base85 || !atlas->temporary.alloc || !atlas->temporary.free ||
+      |                                                                    ^~
+src/nuklear.h:17549:15: error: invalid use of undefined type ‘struct nk_font_atlas’
+17549 |         !atlas->permanent.alloc || !atlas->permanent.free)
+      |               ^~
+src/nuklear.h:17549:42: error: invalid use of undefined type ‘struct nk_font_atlas’
+17549 |         !atlas->permanent.alloc || !atlas->permanent.free)
+      |                                          ^~
+src/nuklear.h:17553:28: error: invalid use of undefined type ‘struct nk_font_atlas’
+17553 |     compressed_data = atlas->temporary.alloc(atlas->temporary.userdata,0, (nk_size)compressed_size);
+      |                            ^~
+src/nuklear.h:17553:51: error: invalid use of undefined type ‘struct nk_font_atlas’
+17553 |     compressed_data = atlas->temporary.alloc(atlas->temporary.userdata,0, (nk_size)compressed_size);
+      |                                                   ^~
+src/nuklear.h:17557:41: warning: passing argument 1 of ‘nk_font_atlas_add_compressed’ from incompatible pointer type [-Wincompatible-pointer-types]
+17557 |     font = nk_font_atlas_add_compressed(atlas, compressed_data,
+      |                                         ^~~~~
+      |                                         |
+      |                                         struct nk_font_atlas *
+src/nuklear.h:17499:52: note: expected ‘struct nk_font_atlas *’ but argument is of type ‘struct nk_font_atlas *’
+17499 | nk_font_atlas_add_compressed(struct nk_font_atlas *atlas,
+      |                              ~~~~~~~~~~~~~~~~~~~~~~^~~~~
+src/nuklear.h:17559:10: error: invalid use of undefined type ‘struct nk_font_atlas’
+17559 |     atlas->temporary.free(atlas->temporary.userdata, compressed_data);
+      |          ^~
+src/nuklear.h:17559:32: error: invalid use of undefined type ‘struct nk_font_atlas’
+17559 |     atlas->temporary.free(atlas->temporary.userdata, compressed_data);
+      |                                ^~
+src/nuklear.h: At top level:
+src/nuklear.h:17565:34: warning: ‘struct nk_font_atlas’ declared inside parameter list will not be visible outside of this definition or declaration
+17565 | nk_font_atlas_add_default(struct nk_font_atlas *atlas,
+      |                                  ^~~~~~~~~~~~~
+In file included from src/nuklear.h:11823,
+                 from src/sdlutil.c:15:
+src/nuklear.h: In function ‘nk_font_atlas_add_default’:
+src/nuklear.h:17569:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17569 |     NK_ASSERT(atlas->temporary.alloc);
+      |                    ^~
+src/nuklear.h:17569:5: note: in expansion of macro ‘NK_ASSERT’
+17569 |     NK_ASSERT(atlas->temporary.alloc);
+      |     ^~~~~~~~~
+src/nuklear.h:17570:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17570 |     NK_ASSERT(atlas->temporary.free);
+      |                    ^~
+src/nuklear.h:17570:5: note: in expansion of macro ‘NK_ASSERT’
+17570 |     NK_ASSERT(atlas->temporary.free);
+      |     ^~~~~~~~~
+src/nuklear.h:17571:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17571 |     NK_ASSERT(atlas->permanent.alloc);
+      |                    ^~
+src/nuklear.h:17571:5: note: in expansion of macro ‘NK_ASSERT’
+17571 |     NK_ASSERT(atlas->permanent.alloc);
+      |     ^~~~~~~~~
+src/nuklear.h:17572:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17572 |     NK_ASSERT(atlas->permanent.free);
+      |                    ^~
+src/nuklear.h:17572:5: note: in expansion of macro ‘NK_ASSERT’
+17572 |     NK_ASSERT(atlas->permanent.free);
+      |     ^~~~~~~~~
+In file included from src/sdlutil.c:15:
+src/nuklear.h:17573:48: warning: passing argument 1 of ‘nk_font_atlas_add_compressed_base85’ from incompatible pointer type [-Wincompatible-pointer-types]
+17573 |     return nk_font_atlas_add_compressed_base85(atlas,
+      |                                                ^~~~~
+      |                                                |
+      |                                                struct nk_font_atlas *
+src/nuklear.h:17534:59: note: expected ‘struct nk_font_atlas *’ but argument is of type ‘struct nk_font_atlas *’
+17534 | nk_font_atlas_add_compressed_base85(struct nk_font_atlas *atlas,
+      |                                     ~~~~~~~~~~~~~~~~~~~~~~^~~~~
+src/nuklear.h: At top level:
+src/nuklear.h:17579:10: warning: ISO C forbids forward references to ‘enum’ types [-Wpedantic]
+17579 |     enum nk_font_atlas_format fmt)
+      |          ^~~~~~~~~~~~~~~~~~~~
+src/nuklear.h:17579:10: warning: ‘enum nk_font_atlas_format’ declared inside parameter list will not be visible outside of this definition or declaration
+src/nuklear.h:17578:27: warning: ‘struct nk_font_atlas’ declared inside parameter list will not be visible outside of this definition or declaration
+17578 | nk_font_atlas_bake(struct nk_font_atlas *atlas, int *width, int *height,
+      |                           ^~~~~~~~~~~~~
+src/nuklear.h:17579:31: error: parameter 4 (‘fmt’) has incomplete type
+17579 |     enum nk_font_atlas_format fmt)
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+In file included from src/nuklear.h:11823,
+                 from src/sdlutil.c:15:
+src/nuklear.h: In function ‘nk_font_atlas_bake’:
+src/nuklear.h:17588:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17588 |     NK_ASSERT(atlas->temporary.alloc);
+      |                    ^~
+src/nuklear.h:17588:5: note: in expansion of macro ‘NK_ASSERT’
+17588 |     NK_ASSERT(atlas->temporary.alloc);
+      |     ^~~~~~~~~
+src/nuklear.h:17589:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17589 |     NK_ASSERT(atlas->temporary.free);
+      |                    ^~
+src/nuklear.h:17589:5: note: in expansion of macro ‘NK_ASSERT’
+17589 |     NK_ASSERT(atlas->temporary.free);
+      |     ^~~~~~~~~
+src/nuklear.h:17590:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17590 |     NK_ASSERT(atlas->permanent.alloc);
+      |                    ^~
+src/nuklear.h:17590:5: note: in expansion of macro ‘NK_ASSERT’
+17590 |     NK_ASSERT(atlas->permanent.alloc);
+      |     ^~~~~~~~~
+src/nuklear.h:17591:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17591 |     NK_ASSERT(atlas->permanent.free);
+      |                    ^~
+src/nuklear.h:17591:5: note: in expansion of macro ‘NK_ASSERT’
+17591 |     NK_ASSERT(atlas->permanent.free);
+      |     ^~~~~~~~~
+In file included from src/sdlutil.c:15:
+src/nuklear.h:17596:15: error: invalid use of undefined type ‘struct nk_font_atlas’
+17596 |         !atlas->temporary.alloc || !atlas->temporary.free ||
+      |               ^~
+src/nuklear.h:17596:42: error: invalid use of undefined type ‘struct nk_font_atlas’
+17596 |         !atlas->temporary.alloc || !atlas->temporary.free ||
+      |                                          ^~
+src/nuklear.h:17597:15: error: invalid use of undefined type ‘struct nk_font_atlas’
+17597 |         !atlas->permanent.alloc || !atlas->permanent.free)
+      |               ^~
+src/nuklear.h:17597:42: error: invalid use of undefined type ‘struct nk_font_atlas’
+17597 |         !atlas->permanent.alloc || !atlas->permanent.free)
+      |                                          ^~
+src/nuklear.h:17602:15: error: invalid use of undefined type ‘struct nk_font_atlas’
+17602 |     if (!atlas->font_num)
+      |               ^~
+src/nuklear.h:17603:14: error: invalid use of undefined type ‘struct nk_font_atlas’
+17603 |         atlas->default_font = nk_font_atlas_add_default(atlas, 13.0f, 0);
+      |              ^~
+src/nuklear.h:17603:57: warning: passing argument 1 of ‘nk_font_atlas_add_default’ from incompatible pointer type [-Wincompatible-pointer-types]
+17603 |         atlas->default_font = nk_font_atlas_add_default(atlas, 13.0f, 0);
+      |                                                         ^~~~~
+      |                                                         |
+      |                                                         struct nk_font_atlas *
+src/nuklear.h:17565:49: note: expected ‘struct nk_font_atlas *’ but argument is of type ‘struct nk_font_atlas *’
+17565 | nk_font_atlas_add_default(struct nk_font_atlas *atlas,
+      |                           ~~~~~~~~~~~~~~~~~~~~~~^~~~~
+In file included from src/nuklear.h:11823,
+                 from src/sdlutil.c:15:
+src/nuklear.h:17605:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17605 |     NK_ASSERT(atlas->font_num);
+      |                    ^~
+src/nuklear.h:17605:5: note: in expansion of macro ‘NK_ASSERT’
+17605 |     NK_ASSERT(atlas->font_num);
+      |     ^~~~~~~~~
+In file included from src/sdlutil.c:15:
+src/nuklear.h:17606:15: error: invalid use of undefined type ‘struct nk_font_atlas’
+17606 |     if (!atlas->font_num) return 0;
+      |               ^~
+src/nuklear.h:17609:43: error: invalid use of undefined type ‘struct nk_font_atlas’
+17609 |     nk_font_baker_memory(&tmp_size, &atlas->glyph_count, atlas->config, atlas->font_num);
+      |                                           ^~
+src/nuklear.h:17609:63: error: invalid use of undefined type ‘struct nk_font_atlas’
+17609 |     nk_font_baker_memory(&tmp_size, &atlas->glyph_count, atlas->config, atlas->font_num);
+      |                                                               ^~
+src/nuklear.h:17609:78: error: invalid use of undefined type ‘struct nk_font_atlas’
+17609 |     nk_font_baker_memory(&tmp_size, &atlas->glyph_count, atlas->config, atlas->font_num);
+      |                                                                              ^~
+src/nuklear.h:17610:16: error: invalid use of undefined type ‘struct nk_font_atlas’
+17610 |     tmp = atlas->temporary.alloc(atlas->temporary.userdata,0, tmp_size);
+      |                ^~
+src/nuklear.h:17610:39: error: invalid use of undefined type ‘struct nk_font_atlas’
+17610 |     tmp = atlas->temporary.alloc(atlas->temporary.userdata,0, tmp_size);
+      |                                       ^~
+src/nuklear.h:17616:37: error: invalid use of undefined type ‘struct nk_font_atlas’
+17616 |     baker = nk_font_baker(tmp, atlas->glyph_count, atlas->font_num, &atlas->temporary);
+      |                                     ^~
+src/nuklear.h:17616:57: error: invalid use of undefined type ‘struct nk_font_atlas’
+17616 |     baker = nk_font_baker(tmp, atlas->glyph_count, atlas->font_num, &atlas->temporary);
+      |                                                         ^~
+src/nuklear.h:17616:75: error: invalid use of undefined type ‘struct nk_font_atlas’
+17616 |     baker = nk_font_baker(tmp, atlas->glyph_count, atlas->font_num, &atlas->temporary);
+      |                                                                           ^~
+src/nuklear.h:17617:10: error: invalid use of undefined type ‘struct nk_font_atlas’
+17617 |     atlas->glyphs = (struct nk_font_glyph*)atlas->permanent.alloc(
+      |          ^~
+src/nuklear.h:17617:49: error: invalid use of undefined type ‘struct nk_font_atlas’
+17617 |     atlas->glyphs = (struct nk_font_glyph*)atlas->permanent.alloc(
+      |                                                 ^~
+src/nuklear.h:17618:14: error: invalid use of undefined type ‘struct nk_font_atlas’
+17618 |         atlas->permanent.userdata,0, sizeof(struct nk_font_glyph)*(nk_size)atlas->glyph_count);
+      |              ^~
+src/nuklear.h:17618:45: error: invalid application of ‘sizeof’ to incomplete type ‘struct nk_font_glyph’
+17618 |         atlas->permanent.userdata,0, sizeof(struct nk_font_glyph)*(nk_size)atlas->glyph_count);
+      |                                             ^~~~~~
+src/nuklear.h:17618:81: error: invalid use of undefined type ‘struct nk_font_atlas’
+17618 |         atlas->permanent.userdata,0, sizeof(struct nk_font_glyph)*(nk_size)atlas->glyph_count);
+      |                                                                                 ^~
+In file included from src/nuklear.h:11823,
+                 from src/sdlutil.c:15:
+src/nuklear.h:17619:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17619 |     NK_ASSERT(atlas->glyphs);
+      |                    ^~
+src/nuklear.h:17619:5: note: in expansion of macro ‘NK_ASSERT’
+17619 |     NK_ASSERT(atlas->glyphs);
+      |     ^~~~~~~~~
+In file included from src/sdlutil.c:15:
+src/nuklear.h:17620:15: error: invalid use of undefined type ‘struct nk_font_atlas’
+17620 |     if (!atlas->glyphs)
+      |               ^~
+src/nuklear.h:17624:10: error: invalid use of undefined type ‘struct nk_font_atlas’
+17624 |     atlas->custom.w = (NK_CURSOR_DATA_W*2)+1;
+      |          ^~
+src/nuklear.h:17625:10: error: invalid use of undefined type ‘struct nk_font_atlas’
+17625 |     atlas->custom.h = NK_CURSOR_DATA_H + 1;
+      |          ^~
+src/nuklear.h:17626:67: error: invalid use of undefined type ‘struct nk_font_atlas’
+17626 |     if (!nk_font_bake_pack(baker, &img_size, width, height, &atlas->custom,
+      |                                                                   ^~
+src/nuklear.h:17627:14: error: invalid use of undefined type ‘struct nk_font_atlas’
+17627 |         atlas->config, atlas->font_num, &atlas->temporary))
+      |              ^~
+src/nuklear.h:17627:29: error: invalid use of undefined type ‘struct nk_font_atlas’
+17627 |         atlas->config, atlas->font_num, &atlas->temporary))
+      |                             ^~
+src/nuklear.h:17627:47: error: invalid use of undefined type ‘struct nk_font_atlas’
+17627 |         atlas->config, atlas->font_num, &atlas->temporary))
+      |                                               ^~
+src/nuklear.h:17631:10: error: invalid use of undefined type ‘struct nk_font_atlas’
+17631 |     atlas->pixel = atlas->temporary.alloc(atlas->temporary.userdata,0, img_size);
+      |          ^~
+src/nuklear.h:17631:25: error: invalid use of undefined type ‘struct nk_font_atlas’
+17631 |     atlas->pixel = atlas->temporary.alloc(atlas->temporary.userdata,0, img_size);
+      |                         ^~
+src/nuklear.h:17631:48: error: invalid use of undefined type ‘struct nk_font_atlas’
+17631 |     atlas->pixel = atlas->temporary.alloc(atlas->temporary.userdata,0, img_size);
+      |                                                ^~
+In file included from src/nuklear.h:11823,
+                 from src/sdlutil.c:15:
+src/nuklear.h:17632:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17632 |     NK_ASSERT(atlas->pixel);
+      |                    ^~
+src/nuklear.h:17632:5: note: in expansion of macro ‘NK_ASSERT’
+17632 |     NK_ASSERT(atlas->pixel);
+      |     ^~~~~~~~~
+In file included from src/sdlutil.c:15:
+src/nuklear.h:17633:15: error: invalid use of undefined type ‘struct nk_font_atlas’
+17633 |     if (!atlas->pixel)
+      |               ^~
+src/nuklear.h:17637:30: error: invalid use of undefined type ‘struct nk_font_atlas’
+17637 |     nk_font_bake(baker, atlas->pixel, *width, *height,
+      |                              ^~
+src/nuklear.h:17638:14: error: invalid use of undefined type ‘struct nk_font_atlas’
+17638 |         atlas->glyphs, atlas->glyph_count, atlas->config, atlas->font_num);
+      |              ^~
+src/nuklear.h:17638:29: error: invalid use of undefined type ‘struct nk_font_atlas’
+17638 |         atlas->glyphs, atlas->glyph_count, atlas->config, atlas->font_num);
+      |                             ^~
+src/nuklear.h:17638:49: error: invalid use of undefined type ‘struct nk_font_atlas’
+17638 |         atlas->glyphs, atlas->glyph_count, atlas->config, atlas->font_num);
+      |                                                 ^~
+src/nuklear.h:17638:64: error: invalid use of undefined type ‘struct nk_font_atlas’
+17638 |         atlas->glyphs, atlas->glyph_count, atlas->config, atlas->font_num);
+      |                                                                ^~
+src/nuklear.h:17639:35: error: invalid use of undefined type ‘struct nk_font_atlas’
+17639 |     nk_font_bake_custom_data(atlas->pixel, *width, *height, atlas->custom,
+      |                                   ^~
+src/nuklear.h:17639:66: error: invalid use of undefined type ‘struct nk_font_atlas’
+17639 |     nk_font_bake_custom_data(atlas->pixel, *width, *height, atlas->custom,
+      |                                                                  ^~
+src/nuklear.h:17642:16: error: ‘NK_FONT_ATLAS_RGBA32’ undeclared (first use in this function)
+17642 |     if (fmt == NK_FONT_ATLAS_RGBA32) {
+      |                ^~~~~~~~~~~~~~~~~~~~
+src/nuklear.h:17644:31: error: invalid use of undefined type ‘struct nk_font_atlas’
+17644 |         void *img_rgba = atlas->temporary.alloc(atlas->temporary.userdata,0,
+      |                               ^~
+src/nuklear.h:17644:54: error: invalid use of undefined type ‘struct nk_font_atlas’
+17644 |         void *img_rgba = atlas->temporary.alloc(atlas->temporary.userdata,0,
+      |                                                      ^~
+src/nuklear.h:17648:62: error: invalid use of undefined type ‘struct nk_font_atlas’
+17648 |         nk_font_bake_convert(img_rgba, *width, *height, atlas->pixel);
+      |                                                              ^~
+src/nuklear.h:17649:14: error: invalid use of undefined type ‘struct nk_font_atlas’
+17649 |         atlas->temporary.free(atlas->temporary.userdata, atlas->pixel);
+      |              ^~
+src/nuklear.h:17649:36: error: invalid use of undefined type ‘struct nk_font_atlas’
+17649 |         atlas->temporary.free(atlas->temporary.userdata, atlas->pixel);
+      |                                    ^~
+src/nuklear.h:17649:63: error: invalid use of undefined type ‘struct nk_font_atlas’
+17649 |         atlas->temporary.free(atlas->temporary.userdata, atlas->pixel);
+      |                                                               ^~
+src/nuklear.h:17650:14: error: invalid use of undefined type ‘struct nk_font_atlas’
+17650 |         atlas->pixel = img_rgba;
+      |              ^~
+src/nuklear.h:17652:10: error: invalid use of undefined type ‘struct nk_font_atlas’
+17652 |     atlas->tex_width = *width;
+      |          ^~
+src/nuklear.h:17653:10: error: invalid use of undefined type ‘struct nk_font_atlas’
+17653 |     atlas->tex_height = *height;
+      |          ^~
+src/nuklear.h:17656:27: error: invalid use of undefined type ‘struct nk_font_atlas’
+17656 |     for (font_iter = atlas->fonts; font_iter; font_iter = font_iter->next) {
+      |                           ^~
+src/nuklear.h:17656:68: error: invalid use of undefined type ‘struct nk_font’
+17656 |     for (font_iter = atlas->fonts; font_iter; font_iter = font_iter->next) {
+      |                                                                    ^~
+src/nuklear.h:17658:45: error: invalid use of undefined type ‘struct nk_font’
+17658 |         struct nk_font_config *config = font->config;
+      |                                             ^~
+src/nuklear.h:17659:34: error: invalid use of undefined type ‘struct nk_font_config’
+17659 |         nk_font_init(font, config->size, config->fallback_glyph, atlas->glyphs,
+      |                                  ^~
+src/nuklear.h:17659:48: error: invalid use of undefined type ‘struct nk_font_config’
+17659 |         nk_font_init(font, config->size, config->fallback_glyph, atlas->glyphs,
+      |                                                ^~
+src/nuklear.h:17659:71: error: invalid use of undefined type ‘struct nk_font_atlas’
+17659 |         nk_font_init(font, config->size, config->fallback_glyph, atlas->glyphs,
+      |                                                                       ^~
+src/nuklear.h:17660:19: error: invalid use of undefined type ‘struct nk_font_config’
+17660 |             config->font, nk_handle_ptr(0));
+      |                   ^~
+src/nuklear.h:17659:22: warning: passing argument 1 of ‘nk_font_init’ from incompatible pointer type [-Wincompatible-pointer-types]
+17659 |         nk_font_init(font, config->size, config->fallback_glyph, atlas->glyphs,
+      |                      ^~~~
+      |                      |
+      |                      struct nk_font *
+src/nuklear.h:16961:30: note: expected ‘struct nk_font *’ but argument is of type ‘struct nk_font *’
+16961 | nk_font_init(struct nk_font *font, float pixel_height,
+      |              ~~~~~~~~~~~~~~~~^~~~
+src/nuklear.h:17675:42: error: invalid use of undefined type ‘struct nk_font_atlas’
+17675 |         struct nk_cursor *cursor = &atlas->cursors[i];
+      |                                          ^~
+src/nuklear.h:17678:55: error: invalid use of undefined type ‘struct nk_font_atlas’
+17678 |         cursor->img.region[0] = (unsigned short)(atlas->custom.x + nk_cursor_data[i][0].x);
+      |                                                       ^~
+src/nuklear.h:17679:55: error: invalid use of undefined type ‘struct nk_font_atlas’
+17679 |         cursor->img.region[1] = (unsigned short)(atlas->custom.y + nk_cursor_data[i][0].y);
+      |                                                       ^~
+src/nuklear.h:17686:10: error: invalid use of undefined type ‘struct nk_font_atlas’
+17686 |     atlas->temporary.free(atlas->temporary.userdata, tmp);
+      |          ^~
+src/nuklear.h:17686:32: error: invalid use of undefined type ‘struct nk_font_atlas’
+17686 |     atlas->temporary.free(atlas->temporary.userdata, tmp);
+      |                                ^~
+src/nuklear.h:17687:17: error: invalid use of undefined type ‘struct nk_font_atlas’
+17687 |     return atlas->pixel;
+      |                 ^~
+src/nuklear.h:17691:19: error: invalid use of undefined type ‘struct nk_font_atlas’
+17691 |     if (tmp) atlas->temporary.free(atlas->temporary.userdata, tmp);
+      |                   ^~
+src/nuklear.h:17691:41: error: invalid use of undefined type ‘struct nk_font_atlas’
+17691 |     if (tmp) atlas->temporary.free(atlas->temporary.userdata, tmp);
+      |                                         ^~
+src/nuklear.h:17692:14: error: invalid use of undefined type ‘struct nk_font_atlas’
+17692 |     if (atlas->glyphs) {
+      |              ^~
+src/nuklear.h:17693:14: error: invalid use of undefined type ‘struct nk_font_atlas’
+17693 |         atlas->permanent.free(atlas->permanent.userdata, atlas->glyphs);
+      |              ^~
+src/nuklear.h:17693:36: error: invalid use of undefined type ‘struct nk_font_atlas’
+17693 |         atlas->permanent.free(atlas->permanent.userdata, atlas->glyphs);
+      |                                    ^~
+src/nuklear.h:17693:63: error: invalid use of undefined type ‘struct nk_font_atlas’
+17693 |         atlas->permanent.free(atlas->permanent.userdata, atlas->glyphs);
+      |                                                               ^~
+src/nuklear.h:17694:14: error: invalid use of undefined type ‘struct nk_font_atlas’
+17694 |         atlas->glyphs = 0;
+      |              ^~
+src/nuklear.h:17696:14: error: invalid use of undefined type ‘struct nk_font_atlas’
+17696 |     if (atlas->pixel) {
+      |              ^~
+src/nuklear.h:17697:14: error: invalid use of undefined type ‘struct nk_font_atlas’
+17697 |         atlas->temporary.free(atlas->temporary.userdata, atlas->pixel);
+      |              ^~
+src/nuklear.h:17697:36: error: invalid use of undefined type ‘struct nk_font_atlas’
+17697 |         atlas->temporary.free(atlas->temporary.userdata, atlas->pixel);
+      |                                    ^~
+src/nuklear.h:17697:63: error: invalid use of undefined type ‘struct nk_font_atlas’
+17697 |         atlas->temporary.free(atlas->temporary.userdata, atlas->pixel);
+      |                                                               ^~
+src/nuklear.h:17698:14: error: invalid use of undefined type ‘struct nk_font_atlas’
+17698 |         atlas->pixel = 0;
+      |              ^~
+src/nuklear.h:17579:31: warning: unused parameter ‘fmt’ [-Wunused-parameter]
+17579 |     enum nk_font_atlas_format fmt)
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+src/nuklear.h: At top level:
+src/nuklear.h:17703:26: warning: ‘struct nk_font_atlas’ declared inside parameter list will not be visible outside of this definition or declaration
+17703 | nk_font_atlas_end(struct nk_font_atlas *atlas, nk_handle texture,
+      |                          ^~~~~~~~~~~~~
+src/nuklear.h: In function ‘nk_font_atlas_end’:
+src/nuklear.h:17716:32: error: invalid use of undefined type ‘struct nk_font_atlas’
+17716 |         tex_null->uv.x = (atlas->custom.x + 0.5f)/(float)atlas->tex_width;
+      |                                ^~
+src/nuklear.h:17716:63: error: invalid use of undefined type ‘struct nk_font_atlas’
+17716 |         tex_null->uv.x = (atlas->custom.x + 0.5f)/(float)atlas->tex_width;
+      |                                                               ^~
+src/nuklear.h:17717:32: error: invalid use of undefined type ‘struct nk_font_atlas’
+17717 |         tex_null->uv.y = (atlas->custom.y + 0.5f)/(float)atlas->tex_height;
+      |                                ^~
+src/nuklear.h:17717:63: error: invalid use of undefined type ‘struct nk_font_atlas’
+17717 |         tex_null->uv.y = (atlas->custom.y + 0.5f)/(float)atlas->tex_height;
+      |                                                               ^~
+src/nuklear.h:17719:27: error: invalid use of undefined type ‘struct nk_font_atlas’
+17719 |     for (font_iter = atlas->fonts; font_iter; font_iter = font_iter->next) {
+      |                           ^~
+src/nuklear.h:17719:68: error: invalid use of undefined type ‘struct nk_font’
+17719 |     for (font_iter = atlas->fonts; font_iter; font_iter = font_iter->next) {
+      |                                                                    ^~
+src/nuklear.h:17720:18: error: invalid use of undefined type ‘struct nk_font’
+17720 |         font_iter->texture = texture;
+      |                  ^~
+src/nuklear.h:17722:18: error: invalid use of undefined type ‘struct nk_font’
+17722 |         font_iter->handle.texture = texture;
+      |                  ^~
+src/nuklear.h:17726:14: error: invalid use of undefined type ‘struct nk_font_atlas’
+17726 |         atlas->cursors[i].img.handle = texture;
+      |              ^~
+src/nuklear.h:17728:10: error: invalid use of undefined type ‘struct nk_font_atlas’
+17728 |     atlas->temporary.free(atlas->temporary.userdata, atlas->pixel);
+      |          ^~
+src/nuklear.h:17728:32: error: invalid use of undefined type ‘struct nk_font_atlas’
+17728 |     atlas->temporary.free(atlas->temporary.userdata, atlas->pixel);
+      |                                ^~
+src/nuklear.h:17728:59: error: invalid use of undefined type ‘struct nk_font_atlas’
+17728 |     atlas->temporary.free(atlas->temporary.userdata, atlas->pixel);
+      |                                                           ^~
+src/nuklear.h:17729:10: error: invalid use of undefined type ‘struct nk_font_atlas’
+17729 |     atlas->pixel = 0;
+      |          ^~
+src/nuklear.h:17730:10: error: invalid use of undefined type ‘struct nk_font_atlas’
+17730 |     atlas->tex_width = 0;
+      |          ^~
+src/nuklear.h:17731:10: error: invalid use of undefined type ‘struct nk_font_atlas’
+17731 |     atlas->tex_height = 0;
+      |          ^~
+src/nuklear.h:17732:10: error: invalid use of undefined type ‘struct nk_font_atlas’
+17732 |     atlas->custom.x = 0;
+      |          ^~
+src/nuklear.h:17733:10: error: invalid use of undefined type ‘struct nk_font_atlas’
+17733 |     atlas->custom.y = 0;
+      |          ^~
+src/nuklear.h:17734:10: error: invalid use of undefined type ‘struct nk_font_atlas’
+17734 |     atlas->custom.w = 0;
+      |          ^~
+src/nuklear.h:17735:10: error: invalid use of undefined type ‘struct nk_font_atlas’
+17735 |     atlas->custom.h = 0;
+      |          ^~
+src/nuklear.h: At top level:
+src/nuklear.h:17738:30: warning: ‘struct nk_font_atlas’ declared inside parameter list will not be visible outside of this definition or declaration
+17738 | nk_font_atlas_cleanup(struct nk_font_atlas *atlas)
+      |                              ^~~~~~~~~~~~~
+In file included from src/nuklear.h:11823,
+                 from src/sdlutil.c:15:
+src/nuklear.h: In function ‘nk_font_atlas_cleanup’:
+src/nuklear.h:17741:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17741 |     NK_ASSERT(atlas->temporary.alloc);
+      |                    ^~
+src/nuklear.h:17741:5: note: in expansion of macro ‘NK_ASSERT’
+17741 |     NK_ASSERT(atlas->temporary.alloc);
+      |     ^~~~~~~~~
+src/nuklear.h:17742:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17742 |     NK_ASSERT(atlas->temporary.free);
+      |                    ^~
+src/nuklear.h:17742:5: note: in expansion of macro ‘NK_ASSERT’
+17742 |     NK_ASSERT(atlas->temporary.free);
+      |     ^~~~~~~~~
+src/nuklear.h:17743:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17743 |     NK_ASSERT(atlas->permanent.alloc);
+      |                    ^~
+src/nuklear.h:17743:5: note: in expansion of macro ‘NK_ASSERT’
+17743 |     NK_ASSERT(atlas->permanent.alloc);
+      |     ^~~~~~~~~
+src/nuklear.h:17744:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17744 |     NK_ASSERT(atlas->permanent.free);
+      |                    ^~
+src/nuklear.h:17744:5: note: in expansion of macro ‘NK_ASSERT’
+17744 |     NK_ASSERT(atlas->permanent.free);
+      |     ^~~~~~~~~
+In file included from src/sdlutil.c:15:
+src/nuklear.h:17745:25: error: invalid use of undefined type ‘struct nk_font_atlas’
+17745 |     if (!atlas || !atlas->permanent.alloc || !atlas->permanent.free) return;
+      |                         ^~
+src/nuklear.h:17745:52: error: invalid use of undefined type ‘struct nk_font_atlas’
+17745 |     if (!atlas || !atlas->permanent.alloc || !atlas->permanent.free) return;
+      |                                                    ^~
+src/nuklear.h:17746:14: error: invalid use of undefined type ‘struct nk_font_atlas’
+17746 |     if (atlas->config) {
+      |              ^~
+src/nuklear.h:17748:26: error: invalid use of undefined type ‘struct nk_font_atlas’
+17748 |         for (iter = atlas->config; iter; iter = iter->next) {
+      |                          ^~
+src/nuklear.h:17748:53: error: invalid use of undefined type ‘struct nk_font_config’
+17748 |         for (iter = atlas->config; iter; iter = iter->next) {
+      |                                                     ^~
+src/nuklear.h:17750:26: error: invalid use of undefined type ‘struct nk_font_config’
+17750 |             for (i = iter->n; i != iter; i = i->n) {
+      |                          ^~
+src/nuklear.h:17750:47: error: invalid use of undefined type ‘struct nk_font_config’
+17750 |             for (i = iter->n; i != iter; i = i->n) {
+      |                                               ^~
+src/nuklear.h:17751:22: error: invalid use of undefined type ‘struct nk_font_atlas’
+17751 |                 atlas->permanent.free(atlas->permanent.userdata, i->ttf_blob);
+      |                      ^~
+src/nuklear.h:17751:44: error: invalid use of undefined type ‘struct nk_font_atlas’
+17751 |                 atlas->permanent.free(atlas->permanent.userdata, i->ttf_blob);
+      |                                            ^~
+src/nuklear.h:17751:67: error: invalid use of undefined type ‘struct nk_font_config’
+17751 |                 atlas->permanent.free(atlas->permanent.userdata, i->ttf_blob);
+      |                                                                   ^~
+src/nuklear.h:17752:18: error: invalid use of undefined type ‘struct nk_font_config’
+17752 |                 i->ttf_blob = 0;
+      |                  ^~
+src/nuklear.h:17754:18: error: invalid use of undefined type ‘struct nk_font_atlas’
+17754 |             atlas->permanent.free(atlas->permanent.userdata, iter->ttf_blob);
+      |                  ^~
+src/nuklear.h:17754:40: error: invalid use of undefined type ‘struct nk_font_atlas’
+17754 |             atlas->permanent.free(atlas->permanent.userdata, iter->ttf_blob);
+      |                                        ^~
+src/nuklear.h:17754:66: error: invalid use of undefined type ‘struct nk_font_config’
+17754 |             atlas->permanent.free(atlas->permanent.userdata, iter->ttf_blob);
+      |                                                                  ^~
+src/nuklear.h:17755:17: error: invalid use of undefined type ‘struct nk_font_config’
+17755 |             iter->ttf_blob = 0;
+      |                 ^~
+src/nuklear.h: At top level:
+src/nuklear.h:17760:28: warning: ‘struct nk_font_atlas’ declared inside parameter list will not be visible outside of this definition or declaration
+17760 | nk_font_atlas_clear(struct nk_font_atlas *atlas)
+      |                            ^~~~~~~~~~~~~
+In file included from src/nuklear.h:11823,
+                 from src/sdlutil.c:15:
+src/nuklear.h: In function ‘nk_font_atlas_clear’:
+src/nuklear.h:17763:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17763 |     NK_ASSERT(atlas->temporary.alloc);
+      |                    ^~
+src/nuklear.h:17763:5: note: in expansion of macro ‘NK_ASSERT’
+17763 |     NK_ASSERT(atlas->temporary.alloc);
+      |     ^~~~~~~~~
+src/nuklear.h:17764:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17764 |     NK_ASSERT(atlas->temporary.free);
+      |                    ^~
+src/nuklear.h:17764:5: note: in expansion of macro ‘NK_ASSERT’
+17764 |     NK_ASSERT(atlas->temporary.free);
+      |     ^~~~~~~~~
+src/nuklear.h:17765:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17765 |     NK_ASSERT(atlas->permanent.alloc);
+      |                    ^~
+src/nuklear.h:17765:5: note: in expansion of macro ‘NK_ASSERT’
+17765 |     NK_ASSERT(atlas->permanent.alloc);
+      |     ^~~~~~~~~
+src/nuklear.h:17766:20: error: invalid use of undefined type ‘struct nk_font_atlas’
+17766 |     NK_ASSERT(atlas->permanent.free);
+      |                    ^~
+src/nuklear.h:17766:5: note: in expansion of macro ‘NK_ASSERT’
+17766 |     NK_ASSERT(atlas->permanent.free);
+      |     ^~~~~~~~~
+In file included from src/sdlutil.c:15:
+src/nuklear.h:17767:25: error: invalid use of undefined type ‘struct nk_font_atlas’
+17767 |     if (!atlas || !atlas->permanent.alloc || !atlas->permanent.free) return;
+      |                         ^~
+src/nuklear.h:17767:52: error: invalid use of undefined type ‘struct nk_font_atlas’
+17767 |     if (!atlas || !atlas->permanent.alloc || !atlas->permanent.free) return;
+      |                                                    ^~
+src/nuklear.h:17769:14: error: invalid use of undefined type ‘struct nk_font_atlas’
+17769 |     if (atlas->config) {
+      |              ^~
+src/nuklear.h:17771:26: error: invalid use of undefined type ‘struct nk_font_atlas’
+17771 |         for (iter = atlas->config; iter; iter = next) {
+      |                          ^~
+src/nuklear.h:17773:26: error: invalid use of undefined type ‘struct nk_font_config’
+17773 |             for (i = iter->n; i != iter; i = n) {
+      |                          ^~
+src/nuklear.h:17774:22: error: invalid use of undefined type ‘struct nk_font_config’
+17774 |                 n = i->n;
+      |                      ^~
+src/nuklear.h:17775:22: error: invalid use of undefined type ‘struct nk_font_config’
+17775 |                 if (i->ttf_blob)
+      |                      ^~
+src/nuklear.h:17776:26: error: invalid use of undefined type ‘struct nk_font_atlas’
+17776 |                     atlas->permanent.free(atlas->permanent.userdata, i->ttf_blob);
+      |                          ^~
+src/nuklear.h:17776:48: error: invalid use of undefined type ‘struct nk_font_atlas’
+17776 |                     atlas->permanent.free(atlas->permanent.userdata, i->ttf_blob);
+      |                                                ^~
+src/nuklear.h:17776:71: error: invalid use of undefined type ‘struct nk_font_config’
+17776 |                     atlas->permanent.free(atlas->permanent.userdata, i->ttf_blob);
+      |                                                                       ^~
+src/nuklear.h:17777:22: error: invalid use of undefined type ‘struct nk_font_atlas’
+17777 |                 atlas->permanent.free(atlas->permanent.userdata, i);
+      |                      ^~
+src/nuklear.h:17777:44: error: invalid use of undefined type ‘struct nk_font_atlas’
+17777 |                 atlas->permanent.free(atlas->permanent.userdata, i);
+      |                                            ^~
+src/nuklear.h:17779:24: error: invalid use of undefined type ‘struct nk_font_config’
+17779 |             next = iter->next;
+      |                        ^~
+src/nuklear.h:17780:18: error: invalid use of undefined type ‘struct nk_font_config’
+17780 |             if (i->ttf_blob)
+      |                  ^~
+src/nuklear.h:17781:22: error: invalid use of undefined type ‘struct nk_font_atlas’
+17781 |                 atlas->permanent.free(atlas->permanent.userdata, iter->ttf_blob);
+      |                      ^~
+src/nuklear.h:17781:44: error: invalid use of undefined type ‘struct nk_font_atlas’
+17781 |                 atlas->permanent.free(atlas->permanent.userdata, iter->ttf_blob);
+      |                                            ^~
+src/nuklear.h:17781:70: error: invalid use of undefined type ‘struct nk_font_config’
+17781 |                 atlas->permanent.free(atlas->permanent.userdata, iter->ttf_blob);
+      |                                                                      ^~
+src/nuklear.h:17782:18: error: invalid use of undefined type ‘struct nk_font_atlas’
+17782 |             atlas->permanent.free(atlas->permanent.userdata, iter);
+      |                  ^~
+src/nuklear.h:17782:40: error: invalid use of undefined type ‘struct nk_font_atlas’
+17782 |             atlas->permanent.free(atlas->permanent.userdata, iter);
+      |                                        ^~
+src/nuklear.h:17784:14: error: invalid use of undefined type ‘struct nk_font_atlas’
+17784 |         atlas->config = 0;
+      |              ^~
+src/nuklear.h:17786:14: error: invalid use of undefined type ‘struct nk_font_atlas’
+17786 |     if (atlas->fonts) {
+      |              ^~
+src/nuklear.h:17788:26: error: invalid use of undefined type ‘struct nk_font_atlas’
+17788 |         for (iter = atlas->fonts; iter; iter = next) {
+      |                          ^~
+src/nuklear.h:17789:24: error: invalid use of undefined type ‘struct nk_font’
+17789 |             next = iter->next;
+      |                        ^~
+src/nuklear.h:17790:18: error: invalid use of undefined type ‘struct nk_font_atlas’
+17790 |             atlas->permanent.free(atlas->permanent.userdata, iter);
+      |                  ^~
+src/nuklear.h:17790:40: error: invalid use of undefined type ‘struct nk_font_atlas’
+17790 |             atlas->permanent.free(atlas->permanent.userdata, iter);
+      |                                        ^~
+src/nuklear.h:17792:14: error: invalid use of undefined type ‘struct nk_font_atlas’
+17792 |         atlas->fonts = 0;
+      |              ^~
+src/nuklear.h:17794:14: error: invalid use of undefined type ‘struct nk_font_atlas’
+17794 |     if (atlas->glyphs)
+      |              ^~
+src/nuklear.h:17795:14: error: invalid use of undefined type ‘struct nk_font_atlas’
+17795 |         atlas->permanent.free(atlas->permanent.userdata, atlas->glyphs);
+      |              ^~
+src/nuklear.h:17795:36: error: invalid use of undefined type ‘struct nk_font_atlas’
+17795 |         atlas->permanent.free(atlas->permanent.userdata, atlas->glyphs);
+      |                                    ^~
+src/nuklear.h:17795:63: error: invalid use of undefined type ‘struct nk_font_atlas’
+17795 |         atlas->permanent.free(atlas->permanent.userdata, atlas->glyphs);
+      |                                                               ^~
+In file included from src/sdlutil.h:8,
+                 from src/sdlutil.c:3:
+src/nuklear.h:5694:45: error: invalid application of ‘sizeof’ to incomplete type ‘struct nk_font_atlas’
+ 5694 | #define nk_zero_struct(s) nk_zero(&s, sizeof(s))
+      |                                             ^
+src/nuklear.h:17796:5: note: in expansion of macro ‘nk_zero_struct’
+17796 |     nk_zero_struct(*atlas);
+      |     ^~~~~~~~~~~~~~
+In file included from src/sdlutil.c:15:
+src/nuklear.h: In function ‘nk_setup’:
+src/nuklear.h:18874:27: error: ‘struct nk_context’ has no member named ‘draw_list’
+18874 |     nk_draw_list_init(&ctx->draw_list);
+      |                           ^~
+In file included from src/sdlutil.c:15:
+src/nuklear.h: In function ‘nk_labelf_colored’:
+src/nuklear.h:23324:5: warning: implicit declaration of function ‘nk_labelfv_colored’; did you mean ‘nk_labelf_colored’? [-Wimplicit-function-declaration]
+23324 |     nk_labelfv_colored(ctx, flags, color, fmt, args);
+      |     ^~~~~~~~~~~~~~~~~~
+      |     nk_labelf_colored
+src/nuklear.h: In function ‘nk_labelf_colored_wrap’:
+src/nuklear.h:23333:5: warning: implicit declaration of function ‘nk_labelfv_colored_wrap’; did you mean ‘nk_labelf_colored_wrap’? [-Wimplicit-function-declaration]
+23333 |     nk_labelfv_colored_wrap(ctx, color, fmt, args);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+      |     nk_labelf_colored_wrap
+src/nuklear.h: In function ‘nk_labelf’:
+src/nuklear.h:23341:5: warning: implicit declaration of function ‘nk_labelfv’; did you mean ‘nk_labelf’? [-Wimplicit-function-declaration]
+23341 |     nk_labelfv(ctx, flags, fmt, args);
+      |     ^~~~~~~~~~
+      |     nk_labelf
+src/nuklear.h: In function ‘nk_labelf_wrap’:
+src/nuklear.h:23349:5: warning: implicit declaration of function ‘nk_labelfv_wrap’; did you mean ‘nk_labelf_wrap’? [-Wimplicit-function-declaration]
+23349 |     nk_labelfv_wrap(ctx, fmt, args);
+      |     ^~~~~~~~~~~~~~~
+      |     nk_labelf_wrap
+src/nuklear.h: At top level:
+src/nuklear.h:23353:1: warning: conflicting types for ‘nk_labelfv_colored’; have ‘void(struct nk_context *, nk_flags,  struct nk_color,  const char *, __va_list_tag *)’ {aka ‘void(struct nk_context *, unsigned int,  struct nk_color,  const char *, __va_list_tag *)’}
+23353 | nk_labelfv_colored(struct nk_context *ctx, nk_flags flags,
+      | ^~~~~~~~~~~~~~~~~~
+src/nuklear.h:23324:5: note: previous implicit declaration of ‘nk_labelfv_colored’ with type ‘void(struct nk_context *, nk_flags,  struct nk_color,  const char *, __va_list_tag *)’ {aka ‘void(struct nk_context *, unsigned int,  struct nk_color,  const char *, __va_list_tag *)’}
+23324 |     nk_labelfv_colored(ctx, flags, color, fmt, args);
+      |     ^~~~~~~~~~~~~~~~~~
+src/nuklear.h:23362:1: warning: conflicting types for ‘nk_labelfv_colored_wrap’; have ‘void(struct nk_context *, struct nk_color,  const char *, __va_list_tag *)’
+23362 | nk_labelfv_colored_wrap(struct nk_context *ctx, struct nk_color color,
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+src/nuklear.h:23333:5: note: previous implicit declaration of ‘nk_labelfv_colored_wrap’ with type ‘void(struct nk_context *, struct nk_color,  const char *, __va_list_tag *)’
+23333 |     nk_labelfv_colored_wrap(ctx, color, fmt, args);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+src/nuklear.h:23371:1: warning: conflicting types for ‘nk_labelfv’; have ‘void(struct nk_context *, nk_flags,  const char *, __va_list_tag *)’ {aka ‘void(struct nk_context *, unsigned int,  const char *, __va_list_tag *)’}
+23371 | nk_labelfv(struct nk_context *ctx, nk_flags flags, const char *fmt, va_list args)
+      | ^~~~~~~~~~
+src/nuklear.h:23341:5: note: previous implicit declaration of ‘nk_labelfv’ with type ‘void(struct nk_context *, nk_flags,  const char *, __va_list_tag *)’ {aka ‘void(struct nk_context *, unsigned int,  const char *, __va_list_tag *)’}
+23341 |     nk_labelfv(ctx, flags, fmt, args);
+      |     ^~~~~~~~~~
+src/nuklear.h:23379:1: warning: conflicting types for ‘nk_labelfv_wrap’; have ‘void(struct nk_context *, const char *, __va_list_tag *)’
+23379 | nk_labelfv_wrap(struct nk_context *ctx, const char *fmt, va_list args)
+      | ^~~~~~~~~~~~~~~
+src/nuklear.h:23349:5: note: previous implicit declaration of ‘nk_labelfv_wrap’ with type ‘void(struct nk_context *, const char *, __va_list_tag *)’
+23349 |     nk_labelfv_wrap(ctx, fmt, args);
+      |     ^~~~~~~~~~~~~~~
+In file included from src/sdlutil.c:15:
+src/nuklear.h: In function ‘nk_tooltipf’:
+src/nuklear.h:29588:5: warning: implicit declaration of function ‘nk_tooltipfv’; did you mean ‘nk_tooltipf’? [-Wimplicit-function-declaration]
+29588 |     nk_tooltipfv(ctx, fmt, args);
+      |     ^~~~~~~~~~~~
+      |     nk_tooltipf
+src/nuklear.h: At top level:
+src/nuklear.h:29592:1: warning: conflicting types for ‘nk_tooltipfv’; have ‘void(struct nk_context *, const char *, __va_list_tag *)’
+29592 | nk_tooltipfv(struct nk_context *ctx, const char *fmt, va_list args)
+      | ^~~~~~~~~~~~
+src/nuklear.h:29588:5: note: previous implicit declaration of ‘nk_tooltipfv’ with type ‘void(struct nk_context *, const char *, __va_list_tag *)’
+29588 |     nk_tooltipfv(ctx, fmt, args);
+      |     ^~~~~~~~~~~~
+In file included from src/sdlutil.c:16:
+src/nuklear_sdl_renderer.h:16:60: warning: ‘struct nk_font_atlas’ declared inside parameter list will not be visible outside of this definition or declaration
+   16 | NK_API void                 nk_sdl_font_stash_begin(struct nk_font_atlas **atlas);
+      |                                                            ^~~~~~~~~~~~~
+src/nuklear_sdl_renderer.h:62:26: error: field ‘atlas’ has incomplete type
+   62 |     struct nk_font_atlas atlas;
+      |                          ^~~~~
+In file included from src/sdlutil.c:16:
+src/nuklear_sdl_renderer.h: In function ‘nk_sdl_render’:
+src/nuklear_sdl_renderer.h:101:15: error: unknown type name ‘nk_draw_index’
+  101 |         const nk_draw_index *offset = NULL;
+      |               ^~~~~~~~~~~~~
+src/nuklear_sdl_renderer.h:106:59: error: array type has incomplete element type ‘struct nk_draw_vertex_layout_element’
+  106 |         static const struct nk_draw_vertex_layout_element vertex_layout[] = {
+      |                                                           ^~~~~~~~~~~~~
+src/nuklear_sdl_renderer.h:107:14: error: ‘NK_VERTEX_POSITION’ undeclared (first use in this function)
+  107 |             {NK_VERTEX_POSITION, NK_FORMAT_FLOAT, NK_OFFSETOF(struct nk_sdl_vertex, position)},
+      |              ^~~~~~~~~~~~~~~~~~
+src/nuklear_sdl_renderer.h:107:34: error: ‘NK_FORMAT_FLOAT’ undeclared (first use in this function); did you mean ‘NK_FILTER_FLOAT’?
+  107 |             {NK_VERTEX_POSITION, NK_FORMAT_FLOAT, NK_OFFSETOF(struct nk_sdl_vertex, position)},
+      |                                  ^~~~~~~~~~~~~~~
+      |                                  NK_FILTER_FLOAT
+src/nuklear_sdl_renderer.h:108:14: error: ‘NK_VERTEX_TEXCOORD’ undeclared (first use in this function)
+  108 |             {NK_VERTEX_TEXCOORD, NK_FORMAT_FLOAT, NK_OFFSETOF(struct nk_sdl_vertex, uv)},
+      |              ^~~~~~~~~~~~~~~~~~
+src/nuklear_sdl_renderer.h:109:14: error: ‘NK_VERTEX_COLOR’ undeclared (first use in this function)
+  109 |             {NK_VERTEX_COLOR, NK_FORMAT_R8G8B8A8, NK_OFFSETOF(struct nk_sdl_vertex, col)},
+      |              ^~~~~~~~~~~~~~~
+src/nuklear_sdl_renderer.h:109:31: error: ‘NK_FORMAT_R8G8B8A8’ undeclared (first use in this function)
+  109 |             {NK_VERTEX_COLOR, NK_FORMAT_R8G8B8A8, NK_OFFSETOF(struct nk_sdl_vertex, col)},
+      |                               ^~~~~~~~~~~~~~~~~~
+src/nuklear_sdl_renderer.h:110:14: error: ‘NK_VERTEX_LAYOUT_END’ undeclared (first use in this function)
+  110 |             {NK_VERTEX_LAYOUT_END}
+      |              ^~~~~~~~~~~~~~~~~~~~
+src/nuklear_sdl_renderer.h:130:25: error: unknown type name ‘nk_draw_index’
+  130 |         offset = (const nk_draw_index*)nk_buffer_memory_const(&ebuf);
+      |                         ^~~~~~~~~~~~~
+src/nuklear_sdl_renderer.h:138:9: warning: implicit declaration of function ‘nk_draw_foreach’; did you mean ‘nk_foreach’? [-Wimplicit-function-declaration]
+  138 |         nk_draw_foreach(cmd, &sdl.ctx, &dev->cmds)
+      |         ^~~~~~~~~~~~~~~
+      |         nk_foreach
+src/nuklear_sdl_renderer.h:138:51: error: expected ‘;’ before ‘{’ token
+  138 |         nk_draw_foreach(cmd, &sdl.ctx, &dev->cmds)
+      |                                                   ^
+      |                                                   ;
+  139 |         {
+      |         ~                                          
+src/nuklear_sdl_renderer.h:106:59: warning: unused variable ‘vertex_layout’ [-Wunused-variable]
+  106 |         static const struct nk_draw_vertex_layout_element vertex_layout[] = {
+      |                                                           ^~~~~~~~~~~~~
+src/nuklear_sdl_renderer.h:101:30: warning: variable ‘offset’ set but not used [-Wunused-but-set-variable]
+  101 |         const nk_draw_index *offset = NULL;
+      |                              ^~~~~~
+src/nuklear_sdl_renderer.h:97:16: warning: unused variable ‘vc’ [-Wunused-variable]
+   97 |         size_t vc = offsetof(struct nk_sdl_vertex, col);
+      |                ^~
+src/nuklear_sdl_renderer.h:96:16: warning: unused variable ‘vt’ [-Wunused-variable]
+   96 |         size_t vt = offsetof(struct nk_sdl_vertex, uv);
+      |                ^~
+src/nuklear_sdl_renderer.h:95:16: warning: unused variable ‘vp’ [-Wunused-variable]
+   95 |         size_t vp = offsetof(struct nk_sdl_vertex, position);
+      |                ^~
+src/nuklear_sdl_renderer.h:94:13: warning: unused variable ‘vs’ [-Wunused-variable]
+   94 |         int vs = sizeof(struct nk_sdl_vertex);
+      |             ^~
+src/nuklear_sdl_renderer.h: At top level:
+src/nuklear_sdl_renderer.h:249:1: error: conflicting types for ‘nk_sdl_font_stash_begin’; have ‘void(struct nk_font_atlas **)’
+  249 | nk_sdl_font_stash_begin(struct nk_font_atlas **atlas)
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from src/sdlutil.c:16:
+src/nuklear_sdl_renderer.h:16:29: note: previous declaration of ‘nk_sdl_font_stash_begin’ with type ‘void(struct nk_font_atlas **)’
+   16 | NK_API void                 nk_sdl_font_stash_begin(struct nk_font_atlas **atlas);
+      |                             ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from src/sdlutil.c:16:
+src/nuklear_sdl_renderer.h: In function ‘nk_sdl_font_stash_end’:
+src/nuklear_sdl_renderer.h:260:52: error: ‘NK_FONT_ATLAS_RGBA32’ undeclared (first use in this function)
+  260 |     image = nk_font_atlas_bake(&sdl.atlas, &w, &h, NK_FONT_ATLAS_RGBA32);
+      |                                                    ^~~~~~~~~~~~~~~~~~~~
+src/sdlutil.c: In function ‘create_ctx’:
+src/sdlutil.c:77:16: error: variable ‘config’ has initializer but incomplete type
+   77 |         struct nk_font_config config = nk_font_config(0);
+      |                ^~~~~~~~~~~~~~
+src/sdlutil.c:77:31: error: storage size of ‘config’ isn’t known
+   77 |         struct nk_font_config config = nk_font_config(0);
+      |                               ^~~~~~
+src/sdlutil.c:83:42: warning: passing argument 1 of ‘nk_font_atlas_add_default’ from incompatible pointer type [-Wincompatible-pointer-types]
+   83 |         font = nk_font_atlas_add_default(atlas, 13 * FONT_SCALE, &config);
+      |                                          ^~~~~
+      |                                          |
+      |                                          struct nk_font_atlas *
+In file included from src/sdlutil.c:15:
+src/nuklear.h:17565:49: note: expected ‘struct nk_font_atlas *’ but argument is of type ‘struct nk_font_atlas *’
+17565 | nk_font_atlas_add_default(struct nk_font_atlas *atlas,
+      |                           ~~~~~~~~~~~~~~~~~~~~~~^~~~~
+src/sdlutil.c:88:13: error: invalid use of undefined type ‘struct nk_font’
+   88 |         font->handle.height /= FONT_SCALE;
+      |             ^~
+src/sdlutil.c:90:37: error: invalid use of undefined type ‘struct nk_font’
+   90 |         nk_style_set_font(ctx, &font->handle);
+      |                                     ^~
+src/sdlutil.c:90:27: warning: passing argument 1 of ‘nk_style_set_font’ from incompatible pointer type [-Wincompatible-pointer-types]
+   90 |         nk_style_set_font(ctx, &font->handle);
+      |                           ^~~
+      |                           |
+      |                           sdl_ctx_t *
+In file included from src/sdlutil.c:15:
+src/nuklear.h:18715:38: note: expected ‘struct nk_context *’ but argument is of type ‘sdl_ctx_t *’
+18715 | nk_style_set_font(struct nk_context *ctx, const struct nk_user_font *font)
+      |                   ~~~~~~~~~~~~~~~~~~~^~~
+src/sdlutil.c:77:31: warning: unused variable ‘config’ [-Wunused-variable]
+   77 |         struct nk_font_config config = nk_font_config(0);
+      |                               ^~~~~~
+In file included from src/sdlutil.c:15:
+src/nuklear.h: In function ‘nk_draw_list_command_last’:
+src/nuklear.h:9557:1: warning: control reaches end of non-void function [-Wreturn-type]
+ 9557 | }
+      | ^
+src/nuklear.h: In function ‘nk_draw_vertex_layout_element_is_end_of_layout’:
+src/nuklear.h:9648:1: warning: control reaches end of non-void function [-Wreturn-type]
+ 9648 | }
+      | ^
+src/nuklear.h: In function ‘nk__draw_begin’:
+src/nuklear.h:10709:1: warning: control reaches end of non-void function [-Wreturn-type]
+10709 | }
+      | ^
+src/nuklear.h: In function ‘nk__draw_end’:
+src/nuklear.h:10714:1: warning: control reaches end of non-void function [-Wreturn-type]
+10714 | }
+      | ^
+src/nuklear.h: In function ‘nk__draw_next’:
+src/nuklear.h:10720:1: warning: control reaches end of non-void function [-Wreturn-type]
+10720 | }
+      | ^
+In file included from src/sdlutil.c:15:
+src/nuklear.h: In function ‘nk_font_atlas_add_from_memory’:
+src/nuklear.h:17470:1: warning: control reaches end of non-void function [-Wreturn-type]
+17470 | }
+      | ^
+src/nuklear.h: In function ‘nk_font_atlas_add_from_file’:
+src/nuklear.h:17496:1: warning: control reaches end of non-void function [-Wreturn-type]
+17496 | }
+      | ^
+src/nuklear.h: In function ‘nk_font_atlas_add_compressed’:
+src/nuklear.h:17532:1: warning: control reaches end of non-void function [-Wreturn-type]
+17532 | }
+      | ^
+make: *** [Makefile:7: mandelbrot] Error 1

@@ -5,6 +5,8 @@
 
 #include <SDL2/SDL.h>
 
+#include "nuklear.h"
+
 typedef struct {
     SDL_Window* win;
     SDL_Renderer* ren;
@@ -13,6 +15,9 @@ typedef struct {
     bool window_should_close;
     SDL_KeyCode current_key_state[512];
     SDL_KeyCode previous_key_state[512];
+
+    struct nk_context *nk;
+    struct nk_colorf bg;
 } sdl_ctx_t;
 
 typedef enum {
