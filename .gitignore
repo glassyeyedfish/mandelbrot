@@ -1,2 +1,5 @@
 # The Build Folder
 build
+
+# IDE Junk
+.vscode
